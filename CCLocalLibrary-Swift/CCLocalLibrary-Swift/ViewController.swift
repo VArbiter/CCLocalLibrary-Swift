@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let d : Dictionary<String , Any> = ["1":"0"];
+        print("\(ccIsDictionaryValued("")) false is the answer");
+        print("\(ccIsDictionaryValued(d)) ture is the answer");
     }
 
     override func didReceiveMemoryWarning() {

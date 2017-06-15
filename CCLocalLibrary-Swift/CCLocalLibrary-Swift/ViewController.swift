@@ -13,8 +13,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let d : Dictionary<String , Any> = ["1":"0"];
-        print("\(ccIsDictionaryValued("")) false is the answer");
-        print("\(ccIsDictionaryValued(d)) ture is the answer");
+        CCLog("\(ccIsDictionaryValued("")) false is the answer");
+        CCLog("\(ccIsDictionaryValued(d)) ture is the answer");
+        
+        /*
+        var array : [Any] = [];
+        array.stringClass = "\(String.self)";
+        if let stringClassT = array.stringClass {
+            print("\(stringClassT)");
+        }
+         */
+        
+        var arrayAppend : [String] = [];
+        arrayAppend.ccAppend("0123456", itemType: "\(String.self)");
+        arrayAppend.ccAppend("6543210", itemType: nil, changeObserver: { (item, intTotalCount) in
+            
+        }) { 
+            
+        };
+        CCLog("\(arrayAppend)");
     }
 
     override func didReceiveMemoryWarning() {

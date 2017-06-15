@@ -25,9 +25,8 @@ extension Dictionary {
             let dictionary : Dictionary? = try JSONSerialization.jsonObject(with: dataJson!, options: .mutableContainers) as? Dictionary;
             if let dictionaryT = dictionary {
                 return dictionaryT;
-            } else {
-                return nil;
             }
+            return nil;
         } catch {
             CCLog("\(error)");
         }

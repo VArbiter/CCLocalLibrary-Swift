@@ -15,7 +15,8 @@ func CCLog <T> (_ string : T ,
             stringFileName : String = #file ,
             stringFunction : String = #function ,
             integerLine : Int = #line) -> Void {
-        print("_CC_LOG_ \n\(stringFileName) \n\(stringFunction) \n\(integerLine) \n\(string)");
+    let date : Date = Date.init(timeIntervalSinceNow: 0);
+    print("_CC_LOG_\(date)_ \n\(stringFileName) \n\(stringFunction) \n\(integerLine) \n\(string)");
 }
 
 func ccScreenWidth() -> Double {
@@ -66,7 +67,7 @@ func ccImageWithCache(_ string : String ,_ isCache : Bool) -> UIImage {
     return UIImage.init(contentsOfFile: string)!;
 }
 
-func CC_Safe_UI_Closure(_ closureNil : Any? ,_ closure : @escaping () -> Void) {
+func CC_Safe_UI_Closure(_ closureNil : Any? ,_ closure : () -> Void) {
     guard (closureNil != nil) else {
         return ;
     }
@@ -81,7 +82,7 @@ func CC_Safe_UI_Closure(_ closureNil : Any? ,_ closure : @escaping () -> Void) {
     }
 }
 
-func CC_Safe_Closure(_ closureNil : Any? ,_ closure : @escaping () -> Void){
+func CC_Safe_Closure(_ closureNil : Any? ,_ closure : () -> Void){
     guard (closureNil != nil) else {
         return ;
     }
@@ -92,7 +93,7 @@ func ccLocalizeString(_ string : String , _ : String) -> String {
     return NSLocalizedString(string, comment: "");
 }
 
-func ccOpenOptional(_ value : Any? , _ closure : @escaping (_ any : Any) -> Void) {
+func ccOpenOptional(_ value : Any? , _ closure : (_ any : Any) -> Void) {
     if let valueT = value {
         closure(valueT);
     }

@@ -50,7 +50,7 @@ func ccIsArrayValued(_ array : Any?) -> Bool {
         return false;
     }
     
-    let arrayC = array as? Array<Any>;
+    let arrayC = array as? [Any];
     if let arrayT = arrayC {
         return arrayT.ccIsArrayValued();
     }

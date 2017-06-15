@@ -13,9 +13,11 @@
 		37249BB31EF132BB0037D6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37249BB21EF132BB0037D6BE /* Assets.xcassets */; };
 		37249BB61EF132BB0037D6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BB41EF132BB0037D6BE /* LaunchScreen.storyboard */; };
 		37249BC31EF133C20037D6BE /* CCObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BC21EF133C20037D6BE /* CCObjectExtension.swift */; };
-		37249BC71EF135240037D6BE /* CCCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BC61EF135240037D6BE /* CCCommonDefine.swift */; };
+		37249BC71EF135240037D6BE /* CCCommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BC61EF135240037D6BE /* CCCommonFunction.swift */; };
 		37249BC91EF140810037D6BE /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BC81EF140810037D6BE /* CCArrayExtension.swift */; };
 		37249BCB1EF141C00037D6BE /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BCA1EF141C00037D6BE /* CCDateExtension.swift */; };
+		374E1C4F1EF21C00009A9E1B /* CCCommonDefineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */; };
+		374E1C511EF21C42009A9E1B /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +29,11 @@
 		37249BB51EF132BB0037D6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37249BB71EF132BB0037D6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37249BC21EF133C20037D6BE /* CCObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCObjectExtension.swift; sourceTree = "<group>"; };
-		37249BC61EF135240037D6BE /* CCCommonDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefine.swift; sourceTree = "<group>"; };
+		37249BC61EF135240037D6BE /* CCCommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonFunction.swift; sourceTree = "<group>"; };
 		37249BC81EF140810037D6BE /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
 		37249BCA1EF141C00037D6BE /* CCDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDateExtension.swift; sourceTree = "<group>"; };
+		374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefineKey.swift; sourceTree = "<group>"; };
+		374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,12 @@
 		37249BC11EF133C20037D6BE /* LocalLib */ = {
 			isa = PBXGroup;
 			children = (
-				37249BC61EF135240037D6BE /* CCCommonDefine.swift */,
+				37249BC61EF135240037D6BE /* CCCommonFunction.swift */,
+				374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */,
 				37249BC21EF133C20037D6BE /* CCObjectExtension.swift */,
 				37249BC81EF140810037D6BE /* CCArrayExtension.swift */,
 				37249BCA1EF141C00037D6BE /* CCDateExtension.swift */,
+				374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */,
 			);
 			path = LocalLib;
 			sourceTree = "<group>";
@@ -166,10 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				37249BC91EF140810037D6BE /* CCArrayExtension.swift in Sources */,
-				37249BC71EF135240037D6BE /* CCCommonDefine.swift in Sources */,
+				37249BC71EF135240037D6BE /* CCCommonFunction.swift in Sources */,
 				37249BC31EF133C20037D6BE /* CCObjectExtension.swift in Sources */,
 				37249BCB1EF141C00037D6BE /* CCDateExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
+				374E1C511EF21C42009A9E1B /* CCDecimalExtension.swift in Sources */,
+				374E1C4F1EF21C00009A9E1B /* CCCommonDefineKey.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +344,7 @@
 				37249BBC1EF132BB0037D6BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

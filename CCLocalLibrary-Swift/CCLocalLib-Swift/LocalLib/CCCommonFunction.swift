@@ -11,6 +11,13 @@ import UIKit
 
 typealias CCCommonClosure = (Bool , Any?) -> Void ;
 
+func CCLog <T> (_ string : T ,
+            stringFileName : String = #file ,
+            stringFunction : String = #function ,
+            integerLine : Int = #line) -> Void {
+        print("_CC_LOG_ \n\(stringFileName) \n\(stringFunction) \n\(integerLine) \n\(string)");
+}
+
 func ccScreenWidth() -> Double {
     return Double(UIScreen.main.bounds.size.width);
 }

@@ -35,6 +35,15 @@ class ViewController: UIViewController {
         if let p = "admin".ccMD5Encrypted {
             CCLog(p);
         }
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(with: "ic_launcher_144") { (sender) in
+            CCLog("CLICK_LEFT " + "\(sender)");
+        };
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(with: "ic_launcher_144") { (sender) in
+            CCLog("CLICK_RIGHT " + "\(sender)");
+        }
+;
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -25,7 +25,7 @@ extension UIBarButtonItem {
         self.init(with: imageName, clickAction: nil);
     }
     convenience init(with imageName : String? ,
-                     clickAction closureClick : ((UIBarButtonItem) -> Void)?) {
+                     clickAction closureClick : ((UIBarButtonItem) -> Void)? ) {
         self.init(with: imageName, itemStyle: .plain, clickAction: closureClick);
     }
     convenience init(with imageName : String? ,
@@ -34,10 +34,11 @@ extension UIBarButtonItem {
         var image : UIImage? = nil;
         if let imageNameT = imageName {
             if imageNameT.isStringValued {
-                image = UIImage.init(named: imageNameT)?.resizableImage(withCapInsets: .init(top: 0, left: 30, bottom: 0, right: 0));
+                image = UIImage.init(named: imageNameT)?.resizableImage(withCapInsets: .init(top: 0, left: 30, bottom: 0, right: 0)).withRenderingMode(.alwaysOriginal);
             }
         }
         self.init(image: image, style: style, target: nil, action: nil);
+        self.closureClick = closureClick;
         self.target = self;
         self.action = #selector(ccBarButtonAction(_:));
     }

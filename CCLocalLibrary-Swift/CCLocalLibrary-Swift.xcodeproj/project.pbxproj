@@ -23,6 +23,8 @@
 		37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1551EF3C0570097A038 /* CCStringExtension.swift */; };
 		37B5C1611EF3C0570097A038 /* CCTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */; };
 		37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */; };
+		37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */; };
+		37B5C1671EF3CA970097A038 /* ic_launcher_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B5C1661EF3CA970097A038 /* ic_launcher_144.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		37B5C1551EF3C0570097A038 /* CCStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCStringExtension.swift; sourceTree = "<group>"; };
 		37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTimeIntervalExtension.swift; sourceTree = "<group>"; };
 		37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCButtonExtension.swift; sourceTree = "<group>"; };
+		37B5C1661EF3CA970097A038 /* ic_launcher_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_144.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		37249BAA1EF132BA0037D6BE /* CCLocalLibrary-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				37B5C1661EF3CA970097A038 /* ic_launcher_144.png */,
 				37249BAB1EF132BA0037D6BE /* AppDelegate.swift */,
 				37249BAD1EF132BA0037D6BE /* ViewController.swift */,
 				37249BAF1EF132BB0037D6BE /* Main.storyboard */,
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */,
+				37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 				37249BB61EF132BB0037D6BE /* LaunchScreen.storyboard in Resources */,
 				37249BB31EF132BB0037D6BE /* Assets.xcassets in Resources */,
 				37249BB11EF132BB0037D6BE /* Main.storyboard in Resources */,
+				37B5C1671EF3CA970097A038 /* ic_launcher_144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +227,7 @@
 				37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
+				37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */,
 				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
 				37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */,
 				37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */,

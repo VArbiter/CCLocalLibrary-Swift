@@ -11,14 +11,14 @@ import UIKit
 
 typealias CCCommonClosure = (Bool , Any?) -> Void ;
 
-func CCLog <T> (_ string : T ,
+func CCLog <T> (_ p : T ,
             stringFileName : String = #file ,
             stringFunction : String = #function ,
             integerLine : Int = #line) -> Void {
     let formatter : DateFormatter = DateFormatter.init();
     formatter.dateFormat = "YYYY-MM-dd hh:mm:ss.SSS zzz";
     print("[\(formatter.string(from: .init(timeIntervalSinceNow: 0)))]:");
-    print("_CC_LOG_ \n\(stringFileName) \n\(stringFunction) \n\(integerLine) \n\(string) \n");
+    print("_CC_LOG_ \n\(stringFileName) \n\(stringFunction) \n\(integerLine) \n\(p) \n");
 }
 
 func ccScreenWidth() -> Double {

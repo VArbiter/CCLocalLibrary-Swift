@@ -19,7 +19,18 @@ class ViewController: UIViewController {
         
         var arrayInt : [Double] = [0.0 , 0.0 , 0.1 , 0.2];
         arrayInt.ccRemove(0.0);
-        CCLog("\(arrayInt)");
+        CCLog(arrayInt);
+        
+        let mText : NSMutableAttributedString = NSMutableAttributedString.init();
+        mText.append(NSMutableAttributedString.init());
+        
+        var dict : Dictionary? = Dictionary.init(dictionaryLiteral: (0 , "0")); // key , value
+        dict?.ccSet("3", forKey: 3);
+        dict?.ccSet("4", forKey: 4, observerChange: { (key, value) in
+            CCLog("\(key) , \(value)");
+        }, complete: { (key, value, keys, values) in
+            CCLog("\(key) , \(value) , \(keys) , \(values) ");
+        });
     
     }
 

@@ -19,6 +19,7 @@
 		374E1C4F1EF21C00009A9E1B /* CCCommonDefineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */; };
 		374E1C511EF21C42009A9E1B /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */; };
 		374E1C531EF223C0009A9E1B /* CCDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */; };
+		37B5C13E1EF37BDD0097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefineKey.swift; sourceTree = "<group>"; };
 		374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
 		374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDictionaryExtension.swift; sourceTree = "<group>"; };
+		37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				37249BCA1EF141C00037D6BE /* CCDateExtension.swift */,
 				374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */,
 				374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */,
+				37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */,
 			);
 			path = LocalLib;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B5C13E1EF37BDD0097A038 /* CCAttributedStringExtension.swift in Sources */,
 				37249BC91EF140810037D6BE /* CCArrayExtension.swift in Sources */,
 				37249BC71EF135240037D6BE /* CCCommonFunction.swift in Sources */,
 				37249BC31EF133C20037D6BE /* CCObjectExtension.swift in Sources */,

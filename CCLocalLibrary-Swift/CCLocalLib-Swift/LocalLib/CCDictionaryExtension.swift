@@ -33,4 +33,27 @@ extension Dictionary {
         return nil;
     }
     
+    mutating func ccSet(_ value : Dictionary.Value? , forKey key : Dictionary.Key?) {
+        self.ccSet(value, forKey: key, observerChange: nil, complete: nil);
+    }
+    mutating func ccSet(_ value : Dictionary.Value? ,
+                        forKey key : Dictionary.Key? ,
+                        observerChange closureChange : ((AnyHashable , Any?) -> Void)?,
+                        complete closureComplete : ((AnyHashable , Any? , [AnyHashable]? , [Any]?) -> Void)? ) { // key , value , allKeys , allValues
+        if let keyT = key {
+            if let valueT = value {
+                self.updateValue(valueT, forKey: keyT)
+            } else {
+                self.removeValue(forKey: keyT);
+            }
+            
+            if let closureChangeT = closureChange {
+                closureChangeT(keyT , value);
+            }
+            if let closureCompleteT = closureComplete {
+                closureCompleteT(keyT , value , Array(self.keys) , Array(self.values));
+            }
+        }
+    }
+    
 }

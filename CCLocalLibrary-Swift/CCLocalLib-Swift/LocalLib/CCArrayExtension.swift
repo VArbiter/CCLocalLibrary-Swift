@@ -46,6 +46,82 @@ extension Array {
     }
      */
     
+    /// Swift is a type-safe language .
+    /// Therefore , these function has no effect . but , the monitor of change is an exception
+    /// On the other thought , why I need these monitor ?
+    /*
+    mutating func ccAppend<T : Equatable>(_ item : T?) { // make self (Array) mutable .
+        self.ccAppend(item, itemType: nil);
+    }
+    mutating func ccAppend<T : Equatable>(_ item : T?, itemType clazz : String?) {
+        self.ccAppend(item, itemType: clazz, changeObserver: nil, complete: nil);
+    }
+    mutating func ccAppend<T : Equatable>(_ item : T?,
+                           itemType clazz : String? ,
+                           changeObserver closureChange : ((Any , Int) -> Void)? ,
+                           complete closureComplete : (() -> Void)? ) {
+        var isCanAdd : Bool = false;
+        
+        guard (item != nil) else {
+            return ;
+        }
+        
+        let mirror : Mirror = Mirror.init(reflecting: item!); // reflect : get the item type
+        if let clazzT = clazz {
+            isCanAdd = "\(mirror.subjectType)" == clazzT;
+        } else {
+            isCanAdd = true;
+        }
+        if isCanAdd {
+            if let itemT = (item as? Element) {
+                self.append(itemT);
+                if let closureChangeT = closureChange {
+                    closureChangeT(itemT , self.count);
+                }
+                if let closureCompleteT = closureComplete {
+                    closureCompleteT();
+                }
+            }
+        }
+    }
+    
+    mutating func ccAppend<T : Equatable>(_ items : [T]?) {
+        self.ccAppend(items, objectType: nil);
+    }
+    mutating func ccAppend<T : Equatable>(_ items : [T]? , objectType clazz : String?) {
+//      self.ccAppend(items, itemType: clazz, changeObserver: nil, complete: nil);
+    }
+    mutating func ccAppend<T : Equatable>(_ items : [T]? ,
+                           objectType clazz : String?,
+                           changeObserver closureChange : ((Any , Int) -> Void)? ,
+                           complete closureComplete : (() -> Void)? ) {
+        guard (items != nil) else {
+            return ;
+        }
+        
+        for object in items! {
+            var isCanAdd : Bool = false;
+            let mirror : Mirror = Mirror.init(reflecting: object);
+            if let clazzT = clazz {
+                isCanAdd = "\(mirror.subjectType)" == clazzT;
+            } else {
+                isCanAdd = true;
+            }
+            if isCanAdd {
+                if let objectT = (object as? Element) {
+//                    self.append(object);
+                    if let closureChangeT = closureChange {
+                        closureChangeT(object , self.count);
+                    }
+                }
+            }
+        }
+        if let closureCompleteT = closureComplete {
+            closureCompleteT();
+        }
+    }
+     */
+    
     func ccValueAt(_ index : Int) -> Any? {
         return self.ccValueAt(index, closure: nil);
     }
@@ -63,82 +139,13 @@ extension Array {
         return nil;
     }
     
-    mutating func ccAppend(_ item : Any?) { // make self (Array) mutable .
-        self.ccAppend(item, itemType: nil);
-    }
-    mutating func ccAppend(_ item : Any?, itemType clazz : String?) {
-        self.ccAppend(item, itemType: clazz, changeObserver: nil, complete: nil);
-    }
-    mutating func ccAppend(_ item : Any?,
-                           itemType clazz : String? ,
-                           changeObserver closureChange : ((Any , Int) -> Void)? ,
-                           complete closureComplete : (() -> Void)? ) {
-        var isCanAdd : Bool = false;
-        
-        guard (item != nil) else {
-            return ;
-        }
-        
-        let mirror : Mirror = Mirror.init(reflecting: item!); // reflect : get the item type
-        if let clazzT = clazz {
-            isCanAdd = "\(mirror.subjectType)" == clazzT;
-        } else {
-            isCanAdd = true;
-        }
-        if isCanAdd {
-            if let itemT = item {
-                self.append(itemT as! Element);
-                if let closureChangeT = closureChange {
-                    closureChangeT(itemT , self.count);
-                }
-                if let closureCompleteT = closureComplete {
-                    closureCompleteT();
-                }
-            }
-        }
-    }
-    
-    mutating func ccAppend(_ items : [Any]?) {
-        self.ccAppend(items, objectType: nil);
-    }
-    mutating func ccAppend(_ items : [Any]? , objectType clazz : String?) {
-        self.ccAppend(items, itemType: clazz, changeObserver: nil, complete: nil);
-    }
-    mutating func ccAppend(_ items : [Any]? ,
-                           objectType clazz : String?,
-                           changeObserver closureChange : ((Any , Int) -> Void)? ,
-                           complete closureComplete : (() -> Void)? ) {
-        guard (items != nil) else {
-            return ;
-        }
-        
-        for object in items! {
-            var isCanAdd : Bool = false;
-            let mirror : Mirror = Mirror.init(reflecting: object);
-            if let clazzT = clazz {
-                isCanAdd = "\(mirror.subjectType)" == clazzT;
-            } else {
-                isCanAdd = true;
-            }
-            if isCanAdd {
-                self.append(object as! Element);
-                if let closureChangeT = closureChange {
-                    closureChangeT(object , self.count);
-                }
-            }
-        }
-        if let closureCompleteT = closureComplete {
-            closureCompleteT();
-        }
-    }
-    
-    mutating func ccRemove(_ item : Any?) {
+    mutating func ccRemove<T : Equatable>(_ item : T?) {
         self.ccRemove(item, itemType: nil);
     }
-    mutating func ccRemove(_ item : Any? , itemType clazz : String?) {
+    mutating func ccRemove<T : Equatable>(_ item : T? , itemType clazz : String?) {
         self.ccRemove(item, itemType: clazz, changeObserver: nil, complete: nil);
     }
-    mutating func ccRemove(_ item : Any? ,
+    mutating func ccRemove<T : Equatable>(_ item : T? ,
                            itemType clazz : String? ,
                            changeObserver closureChange : ((Any , Int , Int) -> Void)? , // item , index before delete (but already change with next delete action) , totalCount
                            complete closureComplete : (() -> Void)? ) {
@@ -160,7 +167,7 @@ extension Array {
                     for index in arrayIndexT {
                         self.remove(at: index);
                         if let closureChangeT = closureChange {
-                            closureChangeT(item as Any, index , self.count);
+                            closureChangeT(item!, index , self.count);
                         }
                     }
                     if let closureCompleteT = closureComplete {
@@ -171,7 +178,7 @@ extension Array {
         }
     }
     
-    /// what func(s) existing below , not recomdend to use .
+    /// Where the "removeAll" functions existing below , not recomended to use .
     mutating func ccRemoveAll(itemType clazz : String? ,
                               comfirm closure : @escaping (Any , Bool) -> Bool ) {
         self.ccRemoveAll(itemType: clazz,
@@ -188,7 +195,7 @@ extension Array {
         }
         
         for i in 0..<self.count {
-            let object : Any? = self.ccValueAt(i);
+            let object : AnyHashable? = self.ccValueAt(i) as? AnyHashable;
             guard (object != nil) else {
                 return;
             }

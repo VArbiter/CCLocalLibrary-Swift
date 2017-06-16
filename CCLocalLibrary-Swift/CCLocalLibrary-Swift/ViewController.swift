@@ -16,22 +16,11 @@ class ViewController: UIViewController {
         CCLog("\(ccIsDictionaryValued("")) false is the answer");
         CCLog("\(ccIsDictionaryValued(d)) ture is the answer");
         
-        /*
-        var array : [Any] = [];
-        array.stringClass = "\(String.self)";
-        if let stringClassT = array.stringClass {
-            print("\(stringClassT)");
-        }
-         */
         
-        var arrayAppend : [String] = [];
-        arrayAppend.ccAppend("0123456", itemType: "\(String.self)");
-        arrayAppend.ccAppend("6543210", itemType: nil, changeObserver: { (item, intTotalCount) in
-            
-        }) { 
-            
-        };
-        CCLog("\(arrayAppend)");
+        var arrayInt : [Double] = [0.0 , 0.0 , 0.1 , 0.2];
+        arrayInt.ccRemove(0.0);
+        CCLog("\(arrayInt)");
+    
     }
 
     override func didReceiveMemoryWarning() {

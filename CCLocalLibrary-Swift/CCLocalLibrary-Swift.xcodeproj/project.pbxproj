@@ -20,6 +20,8 @@
 		374E1C511EF21C42009A9E1B /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */; };
 		374E1C531EF223C0009A9E1B /* CCDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */; };
 		37B5C13E1EF37BDD0097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */; };
+		37B5C1421EF3A92E0097A038 /* CCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1411EF3A92E0097A038 /* CCStringExtension.swift */; };
+		37B5C1441EF3B00D0097A038 /* CCTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1431EF3B00D0097A038 /* CCTimeIntervalExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
 		374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDictionaryExtension.swift; sourceTree = "<group>"; };
 		37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
+		37B5C1411EF3A92E0097A038 /* CCStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCStringExtension.swift; sourceTree = "<group>"; };
+		37B5C1431EF3B00D0097A038 /* CCTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTimeIntervalExtension.swift; sourceTree = "<group>"; };
+		37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLocalLibrary-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,7 @@
 		37249BC11EF133C20037D6BE /* LocalLib */ = {
 			isa = PBXGroup;
 			children = (
+				37B5C1471EF3B8B80097A038 /* Bridge */,
 				37249BC61EF135240037D6BE /* CCCommonFunction.swift */,
 				374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */,
 				37249BC21EF133C20037D6BE /* CCObjectExtension.swift */,
@@ -100,8 +106,18 @@
 				374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */,
 				374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */,
 				37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */,
+				37B5C1411EF3A92E0097A038 /* CCStringExtension.swift */,
+				37B5C1431EF3B00D0097A038 /* CCTimeIntervalExtension.swift */,
 			);
 			path = LocalLib;
+			sourceTree = "<group>";
+		};
+		37B5C1471EF3B8B80097A038 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +153,7 @@
 					37249BA71EF132BA0037D6BE = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Y6QZNMQWRN;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -181,12 +198,14 @@
 				37249BC91EF140810037D6BE /* CCArrayExtension.swift in Sources */,
 				37249BC71EF135240037D6BE /* CCCommonFunction.swift in Sources */,
 				37249BC31EF133C20037D6BE /* CCObjectExtension.swift in Sources */,
+				37B5C1421EF3A92E0097A038 /* CCStringExtension.swift in Sources */,
 				37249BCB1EF141C00037D6BE /* CCDateExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
 				374E1C511EF21C42009A9E1B /* CCDecimalExtension.swift in Sources */,
 				374E1C4F1EF21C00009A9E1B /* CCCommonDefineKey.swift in Sources */,
 				374E1C531EF223C0009A9E1B /* CCDictionaryExtension.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
+				37B5C1441EF3B00D0097A038 /* CCTimeIntervalExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +330,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y6QZNMQWRN;
 				INFOPLIST_FILE = "CCLocalLibrary-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CC.CCLocalLibrary-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCLocalLib-Swift/LocalLib/Bridge/CCLocalLibrary-Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -324,11 +346,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y6QZNMQWRN;
 				INFOPLIST_FILE = "CCLocalLibrary-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CC.CCLocalLibrary-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CCLocalLib-Swift/LocalLib/Bridge/CCLocalLibrary-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -27,11 +27,14 @@ class ViewController: UIViewController {
         var dict : Dictionary? = Dictionary.init(dictionaryLiteral: (0 , "0")); // key , value
         dict?.ccSet("3", forKey: 3);
         dict?.ccSet("4", forKey: 4, observerChange: { (key, value) in
-            CCLog("\(key) , \(value)");
+            CCLog("\(key) , \(String(describing: value))");
         }, complete: { (key, value, keys, values) in
-            CCLog("\(key) , \(value) , \(keys) , \(values) ");
+            CCLog("\(key) , \(String(describing: value)) , \(String(describing: keys)) , \(String(describing: values)) ");
         });
     
+        if let p = "admin".ccMD5Encrypted {
+            CCLog(p);
+        }
     }
 
     override func didReceiveMemoryWarning() {

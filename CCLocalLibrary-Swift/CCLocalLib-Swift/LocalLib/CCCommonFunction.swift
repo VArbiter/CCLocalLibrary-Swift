@@ -100,3 +100,10 @@ func ccOpenOptional(_ value : Any? , _ closure : (_ any : Any) -> Void) {
         closure(valueT);
     }
 }
+
+func ccUUID() -> String? {
+    if let p = UIDevice.current.identifierForVendor {
+        return p.uuidString;
+    }
+    return nil;
+}

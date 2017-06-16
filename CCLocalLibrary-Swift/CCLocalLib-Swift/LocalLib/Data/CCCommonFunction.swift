@@ -58,15 +58,15 @@ func ccURL (_ string : String ,_ isFile : Bool) -> URL? {
     return URL.init(string: string);
 }
 
-func ccImage(_ string : String) -> UIImage{
+func ccImage(_ string : String) -> UIImage? {
     return ccImageWithCache(string, true);
 }
 
-func ccImageWithCache(_ string : String ,_ isCache : Bool) -> UIImage {
+func ccImageWithCache(_ string : String ,_ isCache : Bool) -> UIImage? {
     if isCache {
-        return UIImage.init(named: string)!;
+        return UIImage.init(named: string);
     }
-    return UIImage.init(contentsOfFile: string)!;
+    return UIImage.init(contentsOfFile: string);
 }
 
 func CC_Safe_UI_Closure(_ closureNil : Any? ,_ closure : () -> Void) {

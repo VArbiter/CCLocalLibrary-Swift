@@ -8,16 +8,16 @@
 
 import UIKit
 
-private var _CC_ASSOCIATE_KEY_CLOSURE_CLICK : Void?;
+private var _CC_ASSOCIATE_KEY_BAR_BUTTON_ITEM_CLOSURE_CLICK : Void?;
 
 extension UIBarButtonItem {
     
-    var closureClick : ((UIBarButtonItem) -> Void)? {
+    var closureClickP : ((UIBarButtonItem) -> Void)? {
         set (value) {
-            objc_setAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_CLICK, value, .OBJC_ASSOCIATION_COPY_NONATOMIC);
+            objc_setAssociatedObject(self, &_CC_ASSOCIATE_KEY_BAR_BUTTON_ITEM_CLOSURE_CLICK, value, .OBJC_ASSOCIATION_COPY_NONATOMIC);
         }
         get {
-            return objc_getAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_CLICK) as? ((UIBarButtonItem) -> Void);
+            return objc_getAssociatedObject(self, &_CC_ASSOCIATE_KEY_BAR_BUTTON_ITEM_CLOSURE_CLICK) as? ((UIBarButtonItem) -> Void);
         }
     }
     
@@ -38,14 +38,14 @@ extension UIBarButtonItem {
             }
         }
         self.init(image: image, style: style, target: nil, action: nil);
-        self.closureClick = closureClick;
+        self.closureClickP = closureClick;
         self.target = self;
         self.action = #selector(ccBarButtonAction(_:));
     }
     
     @objc private func ccBarButtonAction(_ sender : UIBarButtonItem) {
-        CC_Safe_Closure(self.closureClick) {
-            self.closureClick!(sender);
+        CC_Safe_UI_Closure(self.closureClickP) {
+            self.closureClickP!(sender);
         };
     }
     

@@ -41,8 +41,13 @@ class ViewController: UIViewController {
         };
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(with: "ic_launcher_144") { (sender) in
             CCLog("CLICK_RIGHT " + "\(sender)");
-        }
-;
+        };
+        
+        let button : UIButton = UIButton.init(system: .init(x: 100, y: 100, width: 50, height: 50), clickAction: { (sender) in
+            CCLog("CLICK_BUTTON " + "\(sender)");
+        });
+        button.backgroundColor = UIColor.brown;
+        self.view.addSubview(button);
         
     }
 

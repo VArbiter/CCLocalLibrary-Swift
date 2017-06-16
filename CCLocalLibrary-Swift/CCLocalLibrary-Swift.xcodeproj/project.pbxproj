@@ -12,16 +12,17 @@
 		37249BB11EF132BB0037D6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BAF1EF132BB0037D6BE /* Main.storyboard */; };
 		37249BB31EF132BB0037D6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37249BB21EF132BB0037D6BE /* Assets.xcassets */; };
 		37249BB61EF132BB0037D6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BB41EF132BB0037D6BE /* LaunchScreen.storyboard */; };
-		37249BC31EF133C20037D6BE /* CCObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BC21EF133C20037D6BE /* CCObjectExtension.swift */; };
-		37249BC71EF135240037D6BE /* CCCommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BC61EF135240037D6BE /* CCCommonFunction.swift */; };
-		37249BC91EF140810037D6BE /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BC81EF140810037D6BE /* CCArrayExtension.swift */; };
-		37249BCB1EF141C00037D6BE /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BCA1EF141C00037D6BE /* CCDateExtension.swift */; };
-		374E1C4F1EF21C00009A9E1B /* CCCommonDefineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */; };
-		374E1C511EF21C42009A9E1B /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */; };
-		374E1C531EF223C0009A9E1B /* CCDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */; };
-		37B5C13E1EF37BDD0097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */; };
-		37B5C1421EF3A92E0097A038 /* CCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1411EF3A92E0097A038 /* CCStringExtension.swift */; };
-		37B5C1441EF3B00D0097A038 /* CCTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1431EF3B00D0097A038 /* CCTimeIntervalExtension.swift */; };
+		37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */; };
+		37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */; };
+		37B5C15A1EF3C0570097A038 /* CCCommonDefineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14F1EF3C0570097A038 /* CCCommonDefineKey.swift */; };
+		37B5C15B1EF3C0570097A038 /* CCCommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1501EF3C0570097A038 /* CCCommonFunction.swift */; };
+		37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1511EF3C0570097A038 /* CCDateExtension.swift */; };
+		37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */; };
+		37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */; };
+		37B5C15F1EF3C0570097A038 /* CCObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */; };
+		37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1551EF3C0570097A038 /* CCStringExtension.swift */; };
+		37B5C1611EF3C0570097A038 /* CCTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */; };
+		37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,17 +33,18 @@
 		37249BB21EF132BB0037D6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37249BB51EF132BB0037D6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37249BB71EF132BB0037D6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37249BC21EF133C20037D6BE /* CCObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCObjectExtension.swift; sourceTree = "<group>"; };
-		37249BC61EF135240037D6BE /* CCCommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonFunction.swift; sourceTree = "<group>"; };
-		37249BC81EF140810037D6BE /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
-		37249BCA1EF141C00037D6BE /* CCDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDateExtension.swift; sourceTree = "<group>"; };
-		374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefineKey.swift; sourceTree = "<group>"; };
-		374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
-		374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDictionaryExtension.swift; sourceTree = "<group>"; };
-		37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
-		37B5C1411EF3A92E0097A038 /* CCStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCStringExtension.swift; sourceTree = "<group>"; };
-		37B5C1431EF3B00D0097A038 /* CCTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTimeIntervalExtension.swift; sourceTree = "<group>"; };
 		37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLocalLibrary-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
+		37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
+		37B5C14F1EF3C0570097A038 /* CCCommonDefineKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefineKey.swift; sourceTree = "<group>"; };
+		37B5C1501EF3C0570097A038 /* CCCommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonFunction.swift; sourceTree = "<group>"; };
+		37B5C1511EF3C0570097A038 /* CCDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDateExtension.swift; sourceTree = "<group>"; };
+		37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
+		37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDictionaryExtension.swift; sourceTree = "<group>"; };
+		37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCObjectExtension.swift; sourceTree = "<group>"; };
+		37B5C1551EF3C0570097A038 /* CCStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCStringExtension.swift; sourceTree = "<group>"; };
+		37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTimeIntervalExtension.swift; sourceTree = "<group>"; };
+		37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCBarButtonItemExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,17 +99,9 @@
 		37249BC11EF133C20037D6BE /* LocalLib */ = {
 			isa = PBXGroup;
 			children = (
+				37B5C14C1EF3C0570097A038 /* Data */,
+				37B5C1571EF3C0570097A038 /* View */,
 				37B5C1471EF3B8B80097A038 /* Bridge */,
-				37249BC61EF135240037D6BE /* CCCommonFunction.swift */,
-				374E1C4E1EF21C00009A9E1B /* CCCommonDefineKey.swift */,
-				37249BC21EF133C20037D6BE /* CCObjectExtension.swift */,
-				37249BC81EF140810037D6BE /* CCArrayExtension.swift */,
-				37249BCA1EF141C00037D6BE /* CCDateExtension.swift */,
-				374E1C501EF21C42009A9E1B /* CCDecimalExtension.swift */,
-				374E1C521EF223C0009A9E1B /* CCDictionaryExtension.swift */,
-				37B5C13D1EF37BDD0097A038 /* CCAttributedStringExtension.swift */,
-				37B5C1411EF3A92E0097A038 /* CCStringExtension.swift */,
-				37B5C1431EF3B00D0097A038 /* CCTimeIntervalExtension.swift */,
 			);
 			path = LocalLib;
 			sourceTree = "<group>";
@@ -118,6 +112,31 @@
 				37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */,
 			);
 			path = Bridge;
+			sourceTree = "<group>";
+		};
+		37B5C14C1EF3C0570097A038 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */,
+				37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */,
+				37B5C14F1EF3C0570097A038 /* CCCommonDefineKey.swift */,
+				37B5C1501EF3C0570097A038 /* CCCommonFunction.swift */,
+				37B5C1511EF3C0570097A038 /* CCDateExtension.swift */,
+				37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */,
+				37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */,
+				37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */,
+				37B5C1551EF3C0570097A038 /* CCStringExtension.swift */,
+				37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		37B5C1571EF3C0570097A038 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,18 +213,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B5C13E1EF37BDD0097A038 /* CCAttributedStringExtension.swift in Sources */,
-				37249BC91EF140810037D6BE /* CCArrayExtension.swift in Sources */,
-				37249BC71EF135240037D6BE /* CCCommonFunction.swift in Sources */,
-				37249BC31EF133C20037D6BE /* CCObjectExtension.swift in Sources */,
-				37B5C1421EF3A92E0097A038 /* CCStringExtension.swift in Sources */,
-				37249BCB1EF141C00037D6BE /* CCDateExtension.swift in Sources */,
+				37B5C15F1EF3C0570097A038 /* CCObjectExtension.swift in Sources */,
+				37B5C15B1EF3C0570097A038 /* CCCommonFunction.swift in Sources */,
+				37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */,
+				37B5C15A1EF3C0570097A038 /* CCCommonDefineKey.swift in Sources */,
+				37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
-				374E1C511EF21C42009A9E1B /* CCDecimalExtension.swift in Sources */,
-				374E1C4F1EF21C00009A9E1B /* CCCommonDefineKey.swift in Sources */,
-				374E1C531EF223C0009A9E1B /* CCDictionaryExtension.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
-				37B5C1441EF3B00D0097A038 /* CCTimeIntervalExtension.swift in Sources */,
+				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
+				37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */,
+				37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */,
+				37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */,
+				37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */,
+				37B5C1611EF3C0570097A038 /* CCTimeIntervalExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

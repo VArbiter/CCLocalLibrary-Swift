@@ -14,8 +14,6 @@
 		37249BB61EF132BB0037D6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BB41EF132BB0037D6BE /* LaunchScreen.storyboard */; };
 		37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */; };
 		37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */; };
-		37B5C15A1EF3C0570097A038 /* CCCommonDefineKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14F1EF3C0570097A038 /* CCCommonDefineKey.swift */; };
-		37B5C15B1EF3C0570097A038 /* CCCommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1501EF3C0570097A038 /* CCCommonFunction.swift */; };
 		37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1511EF3C0570097A038 /* CCDateExtension.swift */; };
 		37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */; };
 		37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */; };
@@ -25,6 +23,9 @@
 		37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */; };
 		37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */; };
 		37B5C1671EF3CA970097A038 /* ic_launcher_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B5C1661EF3CA970097A038 /* ic_launcher_144.png */; };
+		37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1711EF3DEDE0097A038 /* CCCommonDefine.swift */; };
+		37B5C1741EF3DEDE0097A038 /* CCCommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1721EF3DEDE0097A038 /* CCCommonFunction.swift */; };
+		37B5C1761EF3DF740097A038 /* CCCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1751EF3DF740097A038 /* CCCollectionViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +39,6 @@
 		37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLocalLibrary-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
 		37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
-		37B5C14F1EF3C0570097A038 /* CCCommonDefineKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefineKey.swift; sourceTree = "<group>"; };
-		37B5C1501EF3C0570097A038 /* CCCommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonFunction.swift; sourceTree = "<group>"; };
 		37B5C1511EF3C0570097A038 /* CCDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDateExtension.swift; sourceTree = "<group>"; };
 		37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
 		37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDictionaryExtension.swift; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCBarButtonItemExtension.swift; sourceTree = "<group>"; };
 		37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCButtonExtension.swift; sourceTree = "<group>"; };
 		37B5C1661EF3CA970097A038 /* ic_launcher_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_144.png; sourceTree = "<group>"; };
+		37B5C1711EF3DEDE0097A038 /* CCCommonDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefine.swift; sourceTree = "<group>"; };
+		37B5C1721EF3DEDE0097A038 /* CCCommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonFunction.swift; sourceTree = "<group>"; };
+		37B5C1751EF3DF740097A038 /* CCCollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCollectionViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		37249BC11EF133C20037D6BE /* LocalLib */ = {
 			isa = PBXGroup;
 			children = (
+				37B5C16A1EF3DE9C0097A038 /* Common */,
 				37B5C14C1EF3C0570097A038 /* Data */,
 				37B5C1571EF3C0570097A038 /* View */,
 				37B5C1471EF3B8B80097A038 /* Bridge */,
@@ -124,8 +127,6 @@
 			children = (
 				37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */,
 				37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */,
-				37B5C14F1EF3C0570097A038 /* CCCommonDefineKey.swift */,
-				37B5C1501EF3C0570097A038 /* CCCommonFunction.swift */,
 				37B5C1511EF3C0570097A038 /* CCDateExtension.swift */,
 				37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */,
 				37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */,
@@ -141,8 +142,18 @@
 			children = (
 				37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */,
 				37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */,
+				37B5C1751EF3DF740097A038 /* CCCollectionViewExtension.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		37B5C16A1EF3DE9C0097A038 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				37B5C1711EF3DEDE0097A038 /* CCCommonDefine.swift */,
+				37B5C1721EF3DEDE0097A038 /* CCCommonFunction.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,15 +232,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B5C15F1EF3C0570097A038 /* CCObjectExtension.swift in Sources */,
-				37B5C15B1EF3C0570097A038 /* CCCommonFunction.swift in Sources */,
 				37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */,
-				37B5C15A1EF3C0570097A038 /* CCCommonDefineKey.swift in Sources */,
+				37B5C1741EF3DEDE0097A038 /* CCCommonFunction.swift in Sources */,
 				37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
 				37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */,
 				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
+				37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */,
 				37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */,
+				37B5C1761EF3DF740097A038 /* CCCollectionViewExtension.swift in Sources */,
 				37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */,
 				37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */,
 				37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */,

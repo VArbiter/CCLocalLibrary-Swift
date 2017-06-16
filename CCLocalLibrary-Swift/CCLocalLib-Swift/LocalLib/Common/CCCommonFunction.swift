@@ -91,6 +91,17 @@ func CC_Safe_Closure(_ closureNil : Any? ,_ closure : () -> Void){
     closure() ;
 }
 
+func CC_Main_Queue_Operation(_ closure : () -> Void) {
+    if Thread.isMainThread {
+        closure();
+    }
+    else {
+        DispatchQueue.main.sync {
+            closure();
+        }
+    }
+}
+
 func ccLocalizeString(_ string : String , _ : String) -> String {
     return NSLocalizedString(string, comment: "");
 }

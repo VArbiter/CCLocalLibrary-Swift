@@ -49,7 +49,10 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.brown;
         self.view.addSubview(button);
         
-        
+        let image : UIImage = UIImage.init(named: "02")!.gaussianBlur!;
+        let imageView : UIImageView = UIImageView.init(image: image);
+        imageView.frame = CGRect.init(origin: CGPoint.init(x: 200, y: 200), size: CGSize.init(width: 200, height: 200));
+        self.view.addSubview(imageView);
     }
 
     override func didReceiveMemoryWarning() {

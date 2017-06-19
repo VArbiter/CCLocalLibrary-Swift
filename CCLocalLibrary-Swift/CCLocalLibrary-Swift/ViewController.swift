@@ -9,16 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var test : String? {
-        willSet {
-            return;
-        }
-        didSet {
-            CCLog(0);
-        }
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +50,6 @@ class ViewController: UIViewController {
         self.view.addSubview(button);
         
         
-        self.test = "0";
-        CCLog(self.test);
     }
 
     override func didReceiveMemoryWarning() {

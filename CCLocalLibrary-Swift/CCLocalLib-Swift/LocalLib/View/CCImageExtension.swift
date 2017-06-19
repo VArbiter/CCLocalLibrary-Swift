@@ -81,7 +81,9 @@ extension UIImage {
         }
         
         var intBoxSize : Int = Int(CGFloat(radius) * self.scale);
-        intBoxSize = intBoxSize - (intBoxSize % 2) + 1;
+        if intBoxSize % 2 == 0 {
+            intBoxSize += 1;
+        }
         var imageRef : CGImage? = image?.cgImage;
         guard imageRef != nil else {
             return self;
@@ -116,7 +118,9 @@ extension UIImage {
             return self;
         }
         
-        memcpy(bufferOut.data, CFDataGetBytePtr(dataInBitmap!), min(bufferIn.rowBytes * Int(bufferIn.height), CFDataGetLength(dataInBitmap!)));
+        memcpy(bufferOut.data,
+               CFDataGetBytePtr(dataInBitmap!),
+               min(bufferIn.rowBytes * Int(bufferIn.height), CFDataGetLength(dataInBitmap!)));
         
         var tempBuffer = malloc(vImageBoxConvolve_ARGB8888(&bufferIn,
                                                            &bufferOut,
@@ -149,13 +153,17 @@ extension UIImage {
         
         free(tempBuffer);
         
-        let colorSpace : CGColorSpace = CGColorSpaceCreateDeviceRGB();
+        let colorSpace : CGColorSpace? = imageRef!.colorSpace;
+        guard colorSpace != nil else {
+            return self;
+        }
+        
         let context : CGContext? = CGContext.init(data: bufferOut.data,
                                                   width: Int(bufferOut.width),
                                                   height: Int(bufferOut.height),
                                                   bitsPerComponent: 8,
                                                   bytesPerRow: bufferOut.rowBytes,
-                                                  space: colorSpace,
+                                                  space: colorSpace!,
                                                   bitmapInfo: imageRef!.bitmapInfo.rawValue);
         guard context != nil else {
             return self;
@@ -165,7 +173,10 @@ extension UIImage {
             if colorT.cgColor.alpha > 0.0 {
                 context!.setFillColor(colorT.withAlphaComponent(_CC_GAUSSIAN_BLUR_TINT_ALPHA_).cgColor);
                 context!.setBlendMode(.plusLighter);
-                context!.fill(CGRect.init(x: 0, y: 0, width: Int(bufferOut.width), height: Int(bufferOut.height)));
+                context!.fill(CGRect.init(x: 0,
+                                          y: 0,
+                                          width: Int(bufferOut.width),
+                                          height: Int(bufferOut.height)));
             }
         }
         

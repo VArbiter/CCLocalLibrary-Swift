@@ -8,8 +8,8 @@
 
 import UIKit
 
-enum CCCollectionViewEndLoadType : Int {
-    case none = 0, end , noMoreData , endRefresh , manualEnd
+enum CCViewEndLoadType : Int {
+    case nonee = 0, end , noMoreData , endRefresh , manualEnd
 }
 
 let _CC_DECIMAL_POINT_POSITION_ : Int16 = 2;

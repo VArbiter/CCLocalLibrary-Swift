@@ -7,8 +7,95 @@
 //
 
 import UIKit
+import MJRefresh
 
 extension UICollectionView {
+    
+    convenience init?(_ frame : CGRect? ,
+                     forLayout layout : UICollectionViewLayout? ,
+                     forDelegateDataSource delegateDataSource : Any?) {
+        self.init(frame,
+                  forLayout: layout,
+                  forDelegate: delegateDataSource,
+                  forDataSource: delegateDataSource);
+    }
+    
+    convenience init?(_ frame : CGRect? ,
+                     forLayout layout : UICollectionViewLayout? ,
+                     forDelegate delegate : Any?,
+                     forDataSource dataSource : Any?) {
+        guard layout != nil else {
+            return nil;
+        }
+        var frameR : CGRect = CGRect.zero;
+        if let frameT = frame {
+            frameR = frameT;
+        }
+        self.init(frame: frameR, collectionViewLayout: layout!);
+        self.backgroundColor = UIColor.clear;
+        self.showsVerticalScrollIndicator = false;
+        self.showsHorizontalScrollIndicator = false;
+        
+        if let delegateT = delegate {
+            self.delegate = delegateT as? UICollectionViewDelegate;
+        }
+        if let dataSourceT = dataSource {
+            self.dataSource = dataSourceT as? UICollectionViewDataSource;
+        }
+    }
+    
+    /// Loading functions
+    
+    func ccLoad(refreshing closureRefreshing : (() -> CCViewEndLoadType)? ,
+                loading closureLoading : (() -> CCViewEndLoadType)? ) {
+        if let closureRefreshingT = closureRefreshing {
+            let customHeader : CCCustomHeader = CCCustomHeader.init();
+            customHeader.refreshingBlock = { [unowned self] in
+                if closureRefreshingT() != CCViewEndLoadType.manualEnd {
+                    self.mj_header.endRefreshing();
+                }
+            };
+            self.mj_header = customHeader;
+        }
+        if let closureLoadingT = closureLoading {
+            let customFooter : CCCustomFooter = CCCustomFooter.init();
+            customFooter.refreshingBlock = { [unowned self] in
+                switch closureLoadingT() {
+                case .noMoreData:
+                    self.mj_footer.endRefreshing();
+                case .manualEnd:
+                    CCLog("ManualEnd");
+                default:
+                    self.mj_footer.endRefreshing();
+                }
+            };
+            self.mj_footer = customFooter;
+        }
+    }
+    
+    func ccHeaderEndRefreshing() {
+        self.mj_header.endRefreshing();
+    }
+    
+    func ccFooterEndLoading(_ type : CCViewEndLoadType?) {
+        if let typeT = type {
+            switch typeT {
+            case .noMoreData:
+                self.mj_footer.endRefreshingWithNoMoreData();
+            default:
+                self.mj_footer.endRefreshing();
+            }
+        }
+    }
+    
+    func ccEndLoading() {
+        self.ccHeaderEndRefreshing();
+        self.ccFooterEndLoading(.nonee);
+    }
+    
+    func ccResetLoadMoreStatus() {
+        self.mj_footer.resetNoMoreData();
+    }
     
     /// When use functions below to regist a cell ,
     /// hightly recomdend to INIT a new cell when collectionView can't find one in reuse pool ,

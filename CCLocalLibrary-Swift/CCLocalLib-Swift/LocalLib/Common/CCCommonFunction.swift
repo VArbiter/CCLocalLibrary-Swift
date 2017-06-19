@@ -14,11 +14,20 @@ typealias CCCommonClosure = (Bool , Any?) -> Void ;
 func CCLog <T> (_ p : T ,
             stringFileName : String = #file ,
             stringFunction : String = #function ,
-            integerLine : Int = #line) -> Void {
+            integerLine : Int = #line) {
     let formatter : DateFormatter = DateFormatter.init();
     formatter.dateFormat = "YYYY-MM-dd hh:mm:ss.SSS zzz";
     print("[\(formatter.string(from: .init(timeIntervalSinceNow: 0)))]:");
     print("_CC_LOG_ \n\(stringFileName) \n\(stringFunction) \n\(integerLine) \n\(p) \n");
+}
+
+func CCLogFunctionInfo(stringFileName : String = #file ,
+                         stringFunction : String = #function ,
+                         integerLine : Int = #line) {
+    let formatter : DateFormatter = DateFormatter.init();
+    formatter.dateFormat = "YYYY-MM-dd hh:mm:ss.SSS zzz";
+    print("[\(formatter.string(from: .init(timeIntervalSinceNow: 0)))]:");
+    print("_CC_LOG_ \n\(stringFileName) \n\(integerLine) \n\(stringFunction) \n");
 }
 
 func ccScreenWidth() -> Double {

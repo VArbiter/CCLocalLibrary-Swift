@@ -164,3 +164,136 @@ extension Array {
     }
     
 }
+
+/// UICollectionViewFlowLayout
+extension UICollectionViewFlowLayout {
+    
+    convenience init(itemSize size : CGSize? ) {
+        self.init(itemSize: size,
+                  sectionInset: nil);
+    }
+    
+    convenience init(itemSize size : CGSize? ,
+                     sectionInset insetSection : UIEdgeInsets? ) {
+        self.init(itemSize: size,
+                  headerSize: nil,
+                  sectionInset: insetSection);
+    }
+    
+    convenience init(itemSize size : CGSize? ,
+                     headerSize sizeHeader : CGSize? ,
+                     sectionInset insetSection : UIEdgeInsets? ) {
+        self.init();
+        if let sizeT = size {
+            self.itemSize = sizeT;
+        }
+        if let sizeHeaderT = sizeHeader {
+            self.headerReferenceSize = sizeHeaderT;
+        }
+        if let insetSectionT = insetSection {
+            self.sectionInset = insetSectionT;
+        } else {
+            self.sectionInset = UIEdgeInsets.zero;
+        }
+    }
+}
+
+/// Delegate && DataSource
+class CCCollectionViewDelegate : NSObject , UICollectionViewDelegateFlowLayout {
+    
+    var closureDidSelect : ((UICollectionView , IndexPath) -> Bool)? ;
+    var clousreDidHighLightedItem : ((UICollectionView , IndexPath) -> Void)? ;
+    var clousreDidUnhighLightedItem : ((UICollectionView , IndexPath) -> Void)? ;
+    var closureMinimumLineSpacingInSection : ((UICollectionView , UICollectionViewLayout , Int) -> CGFloat)? ; // Int for section
+    var closureMinimumInteritemSpacingInSection : ((UICollectionView , UICollectionViewLayout , Int) -> CGFloat)? ; // Int for section
+    var closureSpacingBetweenSections : ((UICollectionView , UICollectionViewLayout , Int) -> UIEdgeInsets)? ; // Int for section
+    
+    internal func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard self.closureDidSelect != nil else {
+            return;
+        }
+        if self.closureDidSelect!(collectionView , indexPath) {
+            collectionView.deselectItem(at: indexPath, animated: false);
+        }
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard self.clousreDidHighLightedItem != nil else {
+            return ;
+        }
+        self.clousreDidHighLightedItem!(collectionView, indexPath);
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        guard self.clousreDidUnhighLightedItem != nil else {
+            return;
+        }
+        self.clousreDidUnhighLightedItem!(collectionView, indexPath);
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        guard self.closureMinimumLineSpacingInSection != nil else {
+            return 0.0;
+        }
+        return self.closureMinimumLineSpacingInSection!(collectionView , collectionViewLayout , section);
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        guard self.closureMinimumInteritemSpacingInSection != nil else {
+            return 0.0;
+        }
+        return self.closureMinimumInteritemSpacingInSection!(collectionView , collectionViewLayout , section);
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        guard self.closureSpacingBetweenSections != nil else {
+            return UIEdgeInsets.zero;
+        }
+        return self.closureSpacingBetweenSections!(collectionView , collectionViewLayout , section);
+    }
+    
+    deinit {
+        CCLogFunctionInfo();
+    }
+}
+
+class CCCollectionViewDataSource : NSObject , UICollectionViewDataSource {
+    
+    var closureSections : ((UICollectionView) -> Int)? ;
+    var closureItemsInSection : ((UICollectionView , Int) -> Int)? ; // Int for section , return is count
+    var closureItentifier : ((UICollectionView , IndexPath) -> String)? ;
+    var closureConfigureItem : ((UICollectionView , UICollectionViewCell , IndexPath) -> UICollectionViewCell)? ;
+    
+    internal func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if let closureSectionsT = self.closureSections {
+            return closureSectionsT(collectionView);
+        }
+        return 1;
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let closureItemsInSectionT = self.closureItemsInSection {
+            return closureItemsInSectionT(collectionView , section);
+        }
+        return 1;
+    }
+    
+    internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var cell : UICollectionViewCell? = nil;
+        if let closureItentifierT = self.closureItentifier {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: closureItentifierT(collectionView , indexPath), for: indexPath);
+        } else {
+            cell = UICollectionViewCell.init();
+        }
+        
+        if let closureConfigureItemT = self.closureConfigureItem {
+            return closureConfigureItemT(collectionView, cell! , indexPath);
+        }
+        return cell!;
+    }
+    
+    deinit {
+        CCLogFunctionInfo();
+    }
+    
+}

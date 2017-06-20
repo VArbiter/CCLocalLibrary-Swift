@@ -120,3 +120,73 @@ extension String {
     }
     
 }
+
+/// Use file name to find , return the first file that be found , nil if not
+extension String {
+    /// Functions below , unavailable with images in Assets.xcassets.
+    
+    /// Search with main Bundle .
+    var ccPath : String? {
+        get {
+            return self.ccPathF(nil, type: nil);
+        }
+    }
+    
+    /// Search with sandbox .
+    var ccPathS : String? {
+        get {
+            return String.ccPathSandBox(NSHomeDirectory());
+        }
+    }
+    
+    var ccData : Data? {
+        get {
+            if let pathT = self.ccPath {
+                if let urlT = ccURL(pathT, true) {
+                    do {
+                        return try Data.init(contentsOf:urlT);
+                    }
+                    catch {
+                        CCLog(error);
+                    }
+                }
+            }
+            return nil;
+        }
+    }
+    
+    /// Search with specific bundle
+    func ccPathF(_ bundle : Bundle? , type : String?) -> String? {
+        let bundleR : Bundle? = bundle;
+        if let bundleT = bundleR {
+            return bundleT.path(forResource: self, ofType: type);
+        }
+        return Bundle.main.path(forResource: self, ofType: type);
+    }
+    
+    /// Search with sand box
+    func ccPathSandBox() -> String? {
+        return String.ccPathSandBox(nil, fileName: self)?.first;
+    }
+    
+    static func ccPathSandBox(_ stringPath : String? , fileName stringName : String) -> [String]? {
+        var stringPathR : String? = stringPath;
+        if stringPathR == nil {
+            stringPathR = NSHomeDirectory();
+        }
+        var array : [String] = [];
+        let fileManager : FileManager = FileManager.default;
+        if let arrayT = fileManager.subpaths(atPath: stringPathR!) {
+            for (_ , itemPath) in arrayT.enumerated() {
+                if let directoryEnumeratorT = fileManager.enumerator(atPath: itemPath) {
+                    for item in directoryEnumeratorT.allObjects {
+                        if stringName.compare(item as! String) == ComparisonResult.orderedSame {
+                            array.append(itemPath.appending(item as! String));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

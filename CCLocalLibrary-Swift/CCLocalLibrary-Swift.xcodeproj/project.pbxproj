@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		371C97F21EF8AB6D00A4ACD7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F11EF8AB6D00A4ACD7 /* images.png */; };
 		371C97F41EF8AC4600A4ACD7 /* 0ZG63407-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */; };
+		371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */; };
 		37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BAB1EF132BA0037D6BE /* AppDelegate.swift */; };
 		37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BAD1EF132BA0037D6BE /* ViewController.swift */; };
 		37249BB11EF132BB0037D6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BAF1EF132BB0037D6BE /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		2775188A15B904D61C3EB22C /* Pods_CCLocalLibrary_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCLocalLibrary_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		371C97F11EF8AB6D00A4ACD7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0ZG63407-0.png"; sourceTree = "<group>"; };
+		371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCGestureRecognizerExtension.swift; sourceTree = "<group>"; };
 		37249BA81EF132BA0037D6BE /* CCLocalLibrary-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCLocalLibrary-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37249BAB1EF132BA0037D6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37249BAD1EF132BA0037D6BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				37B5C1751EF3DF740097A038 /* CCCollectionViewExtension.swift */,
 				3737D96B1EF7B103002A6F9D /* CCColorExtension.swift */,
 				3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */,
+				371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
 				37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */,
+				371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */,
 				3737D96A1EF78871002A6F9D /* CCCustomFooter.swift in Sources */,
 				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
 				37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */,

@@ -13,6 +13,29 @@ import QuartzCore
 
 extension UIImage {
     
+    var width : CGFloat {
+        get {
+            return self.size.width;
+        }
+    }
+    var height : CGFloat {
+        get {
+            return self.size.height;
+        }
+    }
+    func ccZoom(equal scale : CGFloat?) -> CGSize {
+        if let scaleT = scale {
+            if scaleT > 0.0 {
+                let ratio : CGFloat = self.height / self.width ;
+                let ratioWidth : CGFloat = self.width * scaleT;
+                let ratioHeight : CGFloat = ratioWidth * ratio;
+                return CGSize.init(width: ratioWidth, height: ratioHeight);
+            }
+        }
+        return self.size;
+    }
+    
+    
     class func ccImage(_ color : UIColor?) -> UIImage? {
         return self.ccImage(color, size: 0.0);
     }
@@ -41,13 +64,20 @@ extension UIImage {
         return nil;
     }
     
-    /// Sync , not recomended .
-    var gaussianBlur : UIImage? {
+    /// Sync , not recomended . But on the other hand , CI makes it more smooth.
+    var gaussianBlurAcc : UIImage? {
         get {
-            return ccGaussianImageAcc(radius: _CC_GAUSSIAN_BLUR_VALUE_,
-                                      iterationCount: 0,
-                                      tint: UIColor.white);
+            return ccGaussianImageAcc(radius: _CC_GAUSSIAN_BLUR_VALUE_ ,
+                                      iterationCount: _CC_GAUSSIAN_BLUR_ITERATION_COUNT_,
+                                      tint: UIColor.clear);
         }
+    }
+    
+    func ccGaussianImageAcc(complete closureComplete : ((UIImage , UIImage?) -> Void)? ) {
+        self.ccGaussianImageAcc(radius: _CC_GAUSSIAN_BLUR_VALUE_,
+                                iterationCount: _CC_GAUSSIAN_BLUR_ITERATION_COUNT_,
+                                tint: UIColor.clear,
+                                complete: closureComplete);
     }
     
     func ccGaussianImageAcc(radius : Double ,
@@ -67,30 +97,25 @@ extension UIImage {
             })
         }
     }
+
     
     func ccGaussianImageAcc(radius : Double ,
                             iterationCount : Int ,
                             tint color : UIColor? ) -> UIImage? {
-        let image : UIImage? = self.copy() as? UIImage;
-        guard image != nil else {
+        if (floor(self.size.width) * floor(self.size.height)) <= 0 {
             return self;
         }
         
-        if (floor(self.size.width) * floor(self.size.height)) < 0 {
-            return self;
-        }
+        var intBoxSize : UInt32 = UInt32(CGFloat(radius) * self.scale);
+        intBoxSize = intBoxSize - (intBoxSize % 2) + 1;
         
-        var intBoxSize : Int = Int(CGFloat(radius) * self.scale);
-        if intBoxSize % 2 == 0 {
-            intBoxSize += 1;
-        }
-        var imageRef : CGImage? = image?.cgImage;
+        var imageRef : CGImage? = self.cgImage;
         guard imageRef != nil else {
             return self;
         }
         
         if (imageRef!.bitsPerPixel != 32
-            || imageRef?.bitsPerComponent != 8
+            || imageRef!.bitsPerComponent != 8
             || !(imageRef!.bitmapInfo.contains(CGBitmapInfo.alphaInfoMask))) {
             UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale);
             draw(at: .zero);
@@ -98,59 +123,77 @@ extension UIImage {
             UIGraphicsEndImageContext();
         }
         
-        let provider : CGDataProvider? = imageRef!.dataProvider;
-        let dataInBitmap : CFMutableData? = (provider?.data as! CFMutableData);
-        guard dataInBitmap != nil else {
+        guard imageRef != nil else {
             return self;
         }
         
-        var bufferIn : vImage_Buffer = vImage_Buffer.init(data: CFDataGetMutableBytePtr(dataInBitmap!),
-                                                          height: vImagePixelCount(imageRef!.height),
-                                                          width: vImagePixelCount(imageRef!.width),
-                                                          rowBytes: imageRef!.bytesPerRow);
+        var bufferIn : vImage_Buffer = vImage_Buffer();
+        bufferIn.height = vImagePixelCount(imageRef!.height);
+        bufferIn.width = vImagePixelCount(imageRef!.width);
+        bufferIn.rowBytes = imageRef!.bytesPerRow;
         
-        var bufferOut : vImage_Buffer = vImage_Buffer.init(data: malloc(imageRef!.bytesPerRow * imageRef!.height),
-                                                           height: vImagePixelCount(imageRef!.height),
-                                                           width: vImagePixelCount(imageRef!.width),
-                                                           rowBytes: imageRef!.bytesPerRow);
+        var bufferOut : vImage_Buffer = vImage_Buffer();
+        bufferOut.height = vImagePixelCount(imageRef!.height);
+        bufferOut.width = vImagePixelCount(imageRef!.width);
+        bufferOut.rowBytes = imageRef!.bytesPerRow;
+        
+        /// "malloc" && "free" is C language ,
+        /// therefore , they must MATCH to each other ONE BY ONE ,
+        /// to avoid the memory leak of course,
+        /// and be careful of wild pointer (Over released can cause crash).
+        
+        let bytes = bufferOut.rowBytes * Int(bufferOut.height);
+        bufferIn.data = malloc(bytes);
+        bufferOut.data = malloc(bytes);
         
         guard (bufferIn.data != nil && bufferOut.data != nil) else {
+            free(bufferIn.data);
+            free(bufferOut.data);
+            return self;
+        }
+        
+        let tempBuffer = malloc(vImageBoxConvolve_ARGB8888(&bufferOut,
+                                                           &bufferIn,
+                                                           nil,
+                                                           0,
+                                                           0,
+                                                           intBoxSize,
+                                                           intBoxSize,
+                                                           nil,
+                                                           vImage_Flags(kvImageEdgeExtend+kvImageGetTempBufferSize)))
+        
+        let provider : CGDataProvider? = imageRef!.dataProvider;
+        let dataInBitmap : CFData? = provider?.data;
+        
+        guard dataInBitmap != nil else {
             return self;
         }
         
         memcpy(bufferOut.data,
                CFDataGetBytePtr(dataInBitmap!),
-               min(bufferIn.rowBytes * Int(bufferIn.height), CFDataGetLength(dataInBitmap!)));
-        
-        var tempBuffer = malloc(vImageBoxConvolve_ARGB8888(&bufferIn,
-                                                           &bufferOut,
-                                                           nil,
-                                                           0,
-                                                           0,
-                                                           UInt32(intBoxSize),
-                                                           UInt32(intBoxSize),
-                                                           nil,
-                                                           vImage_Flags(kvImageEdgeExtend+kvImageGetTempBufferSize)))
+               min(bytes, CFDataGetLength(dataInBitmap!)));
         
         for _ in 0..<iterationCount {
-            let error : vImage_Error? = vImageBoxConvolve_ARGB8888(&bufferIn,
-                                                                   &bufferOut,
-                                                                   &tempBuffer,
+            let error : vImage_Error? = vImageBoxConvolve_ARGB8888(&bufferOut,
+                                                                   &bufferIn,
+                                                                   tempBuffer,
                                                                    0,
                                                                    0,
                                                                    UInt32(intBoxSize),
                                                                    UInt32(intBoxSize),
                                                                    nil,
-                                                                   vImage_Flags(kvImageEdgeExtend+kvImageGetTempBufferSize));
-            guard error == nil else {
-                free(bufferIn.data);
+                                                                   vImage_Flags(kvImageEdgeExtend));
+            guard error == kvImageNoError else {
+                free(tempBuffer);
                 free(bufferOut.data);
+                free(bufferIn.data);
                 return self;
             }
             
-            swap(&bufferIn, &bufferOut);
+            swap(&bufferIn.data, &bufferOut.data);
         }
         
+        free(bufferIn.data);
         free(tempBuffer);
         
         let colorSpace : CGColorSpace? = imageRef!.colorSpace;
@@ -196,4 +239,56 @@ extension UIImage {
         return imageP;
     }
     
+//MARK: - gaussian with Core Image
+    
+    /// Sync , tooooooo slow . NOT RECOMENDED .
+    var gaussianBlurCI : UIImage? {
+        get {
+            return self.ccGaussianImageCI(radius: _CC_GAUSSIAN_BLUR_VALUE_);
+        }
+    }
+    
+    func ccGaussianImageCI(complete closureComplete : ((UIImage , UIImage?) -> Void)? ) {
+        let quque : DispatchQueue = DispatchQueue.init(label: "Love.cc.love.home",
+                                                       qos: .default,
+                                                       attributes: .concurrent,
+                                                       autoreleaseFrequency: .inherit,
+                                                       target: nil);
+        quque.async {
+            CC_Safe_Closure(closureComplete, {
+                closureComplete!(self , self.ccGaussianImageCI(radius: _CC_GAUSSIAN_BLUR_VALUE_));
+            })
+        }
+    }
+    
+    func ccGaussianImageCI(radius : Double?) -> UIImage? {
+        let context : CIContext = CIContext.init(options: [kCIContextPriorityRequestLow : true]); /// don't let it cost to much resources of GPU .
+        let imageIn : CIImage? = CIImage.init(image: self);
+        guard imageIn != nil else {
+            return self;
+        }
+        
+        let filter : CIFilter? = CIFilter.init(name: "CIGaussianBlur");
+        guard filter != nil else {
+            return self;
+        }
+        filter!.setValue(imageIn, forKey: kCIInputImageKey);
+        filter!.setValue(radius, forKey: kCIInputRadiusKey);
+        
+        let imageR : CIImage? = filter!.value(forKey: kCIOutputImageKey) as? CIImage;
+        guard  imageR != nil else {
+            return self;
+        }
+        let imageO : CGImage? = context.createCGImage(imageR!,
+                                                      from: CGRect.init(origin: CGPoint.zero,
+                                                                        size: CGSize.init(width: imageR!.extent.size.width,
+                                                                                          height: imageR!.extent.size.height)));
+        guard imageO != nil else {
+            return self;
+        }
+        
+        return UIImage.init(cgImage: imageO!);
+    }
+    
+        
 }

@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black;
+        
         let d : Dictionary<String , Any> = ["1":"0"];
         CCLog("\(ccIsDictionaryValued("")) false is the answer");
         CCLog("\(ccIsDictionaryValued(d)) ture is the answer");
@@ -49,10 +51,16 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.brown;
         self.view.addSubview(button);
         
-        let image : UIImage = UIImage.init(named: "02")!.gaussianBlur!;
+        let image : UIImage = UIImage.init(named: "0ZG63407-0")!.gaussianBlurCI!;
         let imageView : UIImageView = UIImageView.init(image: image);
-        imageView.frame = CGRect.init(origin: CGPoint.init(x: 200, y: 200), size: CGSize.init(width: 200, height: 200));
+        imageView.frame = CGRect.init(origin: CGPoint.init(x: 0, y: 200), size: image.ccZoom(equal: 0.4));
         self.view.addSubview(imageView);
+        let imageA : UIImage = UIImage.init(named: "0ZG63407-0")!.gaussianBlurAcc!;
+        let imageViewA : UIImageView = UIImageView.init(image: imageA);
+        imageViewA.frame = CGRect.init(origin: CGPoint.init(x: 0,
+                                                            y: imageView.frame.origin.y + imageView.frame.size.height),
+                                       size: imageA.ccZoom(equal: 0.4));
+        self.view.addSubview(imageViewA);
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,4 +70,3 @@ class ViewController: UIViewController {
 
 
 }
-

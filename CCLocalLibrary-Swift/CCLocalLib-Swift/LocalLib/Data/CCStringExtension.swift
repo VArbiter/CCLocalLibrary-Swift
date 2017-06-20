@@ -11,6 +11,19 @@ import UIKit
 
 extension String {
     
+    var intValue : Int {
+        get {
+            let string : NSString = self as NSString;
+            return string.integerValue;
+        }
+    }
+    var floatValue : Float {
+        get {
+            let string : NSString = self as NSString;
+            return string.floatValue;
+        }
+    }
+    
     var ccDecimalValue : Decimal? {
         get {
             if self.isStringValued {

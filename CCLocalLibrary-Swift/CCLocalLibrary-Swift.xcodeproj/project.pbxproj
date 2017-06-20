@@ -10,6 +10,8 @@
 		371C97F21EF8AB6D00A4ACD7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F11EF8AB6D00A4ACD7 /* images.png */; };
 		371C97F41EF8AC4600A4ACD7 /* 0ZG63407-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */; };
 		371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */; };
+		371C97FC1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97FB1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift */; };
+		371C97FE1EF918A700A4ACD7 /* CCCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97FD1EF918A700A4ACD7 /* CCCommonTools.swift */; };
 		37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BAB1EF132BA0037D6BE /* AppDelegate.swift */; };
 		37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BAD1EF132BA0037D6BE /* ViewController.swift */; };
 		37249BB11EF132BB0037D6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BAF1EF132BB0037D6BE /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		371C97F11EF8AB6D00A4ACD7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0ZG63407-0.png"; sourceTree = "<group>"; };
 		371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCGestureRecognizerExtension.swift; sourceTree = "<group>"; };
+		371C97FB1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImagePickerControllerExtension.swift; sourceTree = "<group>"; };
+		371C97FD1EF918A700A4ACD7 /* CCCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonTools.swift; sourceTree = "<group>"; };
 		37249BA81EF132BA0037D6BE /* CCLocalLibrary-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCLocalLibrary-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37249BAB1EF132BA0037D6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37249BAD1EF132BA0037D6BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,12 +174,12 @@
 		37B5C14C1EF3C0570097A038 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */,
 				37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */,
 				37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */,
 				37B5C1511EF3C0570097A038 /* CCDateExtension.swift */,
 				37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */,
 				37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */,
-				37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */,
 				37B5C1551EF3C0570097A038 /* CCStringExtension.swift */,
 				37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */,
 			);
@@ -191,6 +195,7 @@
 				3737D96B1EF7B103002A6F9D /* CCColorExtension.swift */,
 				3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */,
 				371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */,
+				371C97FB1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			children = (
 				37B5C1711EF3DEDE0097A038 /* CCCommonDefine.swift */,
 				37B5C1721EF3DEDE0097A038 /* CCCommonFunction.swift */,
+				371C97FD1EF918A700A4ACD7 /* CCCommonTools.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -341,12 +347,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371C97FE1EF918A700A4ACD7 /* CCCommonTools.swift in Sources */,
 				37B5C15F1EF3C0570097A038 /* CCObjectExtension.swift in Sources */,
 				37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */,
 				37B5C1741EF3DEDE0097A038 /* CCCommonFunction.swift in Sources */,
 				37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
+				371C97FC1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift in Sources */,
 				37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */,
 				371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */,
 				3737D96A1EF78871002A6F9D /* CCCustomFooter.swift in Sources */,

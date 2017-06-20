@@ -12,10 +12,6 @@ enum CCViewEndLoadType : Int {
     case nonee = 0, end , noMoreData , endRefresh , manualEnd
 }
 
-enum CCImageType : Int {
-    case nonee = 0, jpeg , png , gif , tiff , unknow
-}
-
 let _CC_DECIMAL_POINT_POSITION_ : Int16 = 2;
 
 let _CC_DEFAULT_FONT_SIZE_ : CGFloat = 11.0;

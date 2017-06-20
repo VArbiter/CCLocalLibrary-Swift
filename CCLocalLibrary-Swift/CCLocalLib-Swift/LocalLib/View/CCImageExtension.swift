@@ -13,6 +13,10 @@ import QuartzCore
 
 extension UIImage {
     
+    enum CCImageType : Int {
+        case nonee = 0, jpeg , png , gif , tiff , unknow
+    }
+    
     convenience init(name : String?) {
         self.init(name, isFile: false, rendaring: .alwaysOriginal);
     }

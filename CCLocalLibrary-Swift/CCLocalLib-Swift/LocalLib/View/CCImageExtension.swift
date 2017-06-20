@@ -13,6 +13,25 @@ import QuartzCore
 
 extension UIImage {
     
+    convenience init(name : String?) {
+        self.init(name, isFile: false, rendaring: .alwaysOriginal);
+    }
+    
+    convenience init(file : String?) {
+        self.init(file, isFile: true, rendaring: .alwaysOriginal);
+    }
+    
+    private convenience init(_ string : String? ,
+                             isFile : Bool ,
+                             rendaring mode : UIImageRenderingMode) {
+        if isFile {
+            self.init(file: string);
+        } else {
+            self.init(name: string);
+        }
+        self.withRenderingMode(mode);
+    }
+    
     var width : CGFloat {
         get {
             return self.size.width;
@@ -35,7 +54,58 @@ extension UIImage {
         return self.size;
     }
     
+    /// Type of image , PNG / JPEG
+    func ccType(with data : Data?) -> CCImageType {
+        guard data != nil else {
+            return .unknow;
+        }
+        
+        let dataT : NSData = data as NSData!;
+        var c : UInt8 = 0;
+        dataT.getBytes(&c, length: 1);
+        switch c {
+        case 0xFF:
+            return .jpeg;
+        case 0x89:
+            return .png;
+        case 0x49:
+            fallthrough;
+        case 0x4D:
+            return .tiff;
+        case 0x52:
+            if dataT.length < 12 {
+                return .unknow;
+            }
+            
+        default:
+            return .unknow;
+        }
+        return .unknow;
+    }
     
+    func ccImageData(_ closure : ((CCImageType , Data?) -> Void)? ) -> Data? {
+        
+        let closureT = { (type : CCImageType ,data : Data?) in
+            if let closureR = closure {
+                closureR(type , data);
+            }
+        }
+        
+        var data : Data? = UIImagePNGRepresentation(self);
+        if data != nil {
+            closureT(.png , data);
+            return data;
+        }
+        data = UIImageJPEGRepresentation(self, _CC_IMAGE_JPEG_COMPRESSION_QUALITY_);
+        if data != nil {
+            closureT(.jpeg , data);
+            return data;
+        }
+        closureT(.unknow , data);
+        return nil;
+    }
+    
+    /// COLOR
     class func ccImage(_ color : UIColor?) -> UIImage? {
         return self.ccImage(color, size: 0.0);
     }
@@ -97,7 +167,6 @@ extension UIImage {
             })
         }
     }
-
     
     func ccGaussianImageAcc(radius : Double ,
                             iterationCount : Int ,
@@ -224,7 +293,6 @@ extension UIImage {
         }
         
         imageRef = context!.makeImage();
-        
         guard imageRef != nil else {
             return self;
         }
@@ -290,5 +358,5 @@ extension UIImage {
         return UIImage.init(cgImage: imageO!);
     }
     
-        
 }
+

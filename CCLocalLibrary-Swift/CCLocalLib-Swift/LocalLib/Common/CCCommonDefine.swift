@@ -13,7 +13,7 @@ enum CCViewEndLoadType : Int {
 }
 
 enum CCImageType : Int {
-    case nonee = 0, jpeg , png , unknow
+    case nonee = 0, jpeg , png , gif , tiff , unknow
 }
 
 let _CC_DECIMAL_POINT_POSITION_ : Int16 = 2;

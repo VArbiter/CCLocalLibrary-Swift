@@ -135,7 +135,7 @@ extension String {
     /// Search with sandbox .
     var ccPathS : String? {
         get {
-            return String.ccPathSandBox(NSHomeDirectory());
+            return String.ccPathSandBox(NSHomeDirectory(), fileName: self)?.first;
         }
     }
     
@@ -186,7 +186,9 @@ extension String {
                     }
                 }
             }
+            return array;
         }
+        return nil;
     }
     
 }

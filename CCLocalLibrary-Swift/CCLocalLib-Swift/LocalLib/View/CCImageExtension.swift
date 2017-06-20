@@ -358,5 +358,46 @@ extension UIImage {
         return UIImage.init(cgImage: imageO!);
     }
     
+///MARK: - Compress
+    var dataCompressed : Data? {
+        get {
+            return self.ccCompress(quality: _CC_IMAGE_JPEG_COMPRESSION_QUALITY_SIZE_);
+        }
+    }
+    
+    func ccCompress(quality : CGFloat) -> Data? {
+        if let dataO = self.ccImageData(nil) {
+            let dataC : NSData = dataO as NSData;
+            var dataR : NSData = dataO as NSData;
+            var length : Int = dataC.length;
+            var i : Int = 0;
+            for _ in 0..<10 {
+                if (CGFloat(length) / 1024.0) > quality {
+                    i += 1;
+                    dataR = UIImageJPEGRepresentation(self, 1.0 - CGFloat(i) * _CC_IMAGE_JPEG_COMPRESSION_QUALITY_SCALE_)! as NSData;
+                    length = dataR.length;
+                    continue;
+                }
+                break;
+            }
+            return dataR as Data?;
+        }
+        return nil;
+    }
+    
+///MARK: - Limit
+    var isOverLimit_3M : Bool {
+        get {
+            return self.ccIsOverLimit(bytes: 2.9)
+        }
+    }
+    
+    func ccIsOverLimit(bytes : Float) -> Bool {
+        if let dataT = self.ccImageData(nil) as NSData? {
+            return Float(dataT.length) / pow(1024, 2).floatValue > bytes;
+        }
+        return true;
+    }
+    
 }
 

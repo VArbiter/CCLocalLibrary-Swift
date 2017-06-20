@@ -10,6 +10,20 @@ import Foundation
 
 extension Decimal {
     
+    var floatValue : Float {
+        get {
+            let decimal : NSDecimalNumber = self as NSDecimalNumber;
+            return decimal.floatValue;
+        }
+    }
+    
+    var intValue : Int {
+        get {
+            let decimal : NSDecimalNumber = self as NSDecimalNumber;
+            return decimal.intValue;
+        }
+    }
+    
     var ccTransferToString : String {
         get {
             return "\(self)";

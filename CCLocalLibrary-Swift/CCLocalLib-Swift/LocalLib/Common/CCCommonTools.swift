@@ -45,17 +45,66 @@ open class CCCommonTools : NSObject {
         }
     }
     
-    convenience init(timer interval : TimeInterval ,
-                     action closureAction : (() -> Void)? ,
+//MARK: - Timer
+    private var timer : DispatchSourceTimer? ;
+    
+    convenience init(timer interval : Int ,
+                     action closureAction : (() -> Bool)? ,
+                     cancel closureCancel : (() -> Void)? ) {
+        self.init(timer: interval,
+                  onMain: true,
+                  action: closureAction,
+                  cancel: closureCancel);
+    }
+    
+    convenience init(timer interval : Int ,
+                     onMain isMain : Bool , // is on main thread , when reload
+                     action closureAction : (() -> Bool)? ,
                      cancel closureCancel : (() -> Void)? ) {
         self.init();
-    }
-    
-    func ccCancelTimer() {
         
-    }
-    
-    private func ccCancelTimerAction() {
+        if let timerT = self.timer {
+            timerT.cancel();
+            self.timer = nil;
+        }
         
+        let queue : DispatchQueue = DispatchQueue.global(qos: .default);
+        self.timer = DispatchSource.makeTimerSource(flags: [], queue: queue);
+        self.timer!.scheduleRepeating(deadline: .now(), interval: .seconds(1), leeway: .seconds(interval));
+        self.timer!.setEventHandler(handler: { [unowned self] in
+            guard closureAction != nil else {
+                return ;
+            }
+            let closureT = {
+                if closureAction!() {
+                    self.timer?.cancel();
+                }
+            }
+            if isMain {
+                CC_Safe_UI_Closure(closureAction, { 
+                    closureT();
+                })
+            } else {
+                CC_Safe_Closure(closureAction, { 
+                    closureT();
+                })
+            }
+        });
+        self.timer!.resume();
+        
+        self.timer!.setCancelHandler(handler: {
+            guard closureCancel != nil else {
+                return;
+            }
+            if isMain {
+                CC_Safe_UI_Closure(closureCancel, { 
+                    closureCancel!();
+                })
+            } else {
+                CC_Safe_Closure(closureCancel, { 
+                    closureCancel!();
+                })
+            }
+        })
     }
 }

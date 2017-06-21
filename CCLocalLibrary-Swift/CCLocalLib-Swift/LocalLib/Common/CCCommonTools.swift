@@ -58,7 +58,7 @@ open class CCCommonTools : NSObject {
     }
     
     convenience init(timer interval : Int ,
-                     onMain isMain : Bool , // is on main thread , when reload
+                     onMain isMain : Bool , // is on main thread , when an event has recall
                      action closureAction : (() -> Bool)? ,
                      cancel closureCancel : (() -> Void)? ) {
         self.init();

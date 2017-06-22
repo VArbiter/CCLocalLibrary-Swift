@@ -10,6 +10,7 @@
 		37156C281EFB580000A18D68 /* CCImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C271EFB580000A18D68 /* CCImageViewExtension.swift */; };
 		37156C2D1EFB6A1D00A18D68 /* CCLabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C2C1EFB6A1D00A18D68 /* CCLabelExtension.swift */; };
 		37156C2F1EFB6F9500A18D68 /* CCNavigationItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C2E1EFB6F9500A18D68 /* CCNavigationItemExtension.swift */; };
+		37156C311EFB75F500A18D68 /* CCScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */; };
 		371C97F21EF8AB6D00A4ACD7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F11EF8AB6D00A4ACD7 /* images.png */; };
 		371C97F41EF8AC4600A4ACD7 /* 0ZG63407-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */; };
 		371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */; };
@@ -47,6 +48,7 @@
 		37156C271EFB580000A18D68 /* CCImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageViewExtension.swift; sourceTree = "<group>"; };
 		37156C2C1EFB6A1D00A18D68 /* CCLabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCLabelExtension.swift; sourceTree = "<group>"; };
 		37156C2E1EFB6F9500A18D68 /* CCNavigationItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNavigationItemExtension.swift; sourceTree = "<group>"; };
+		37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCScrollViewExtension.swift; sourceTree = "<group>"; };
 		371C97F11EF8AB6D00A4ACD7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0ZG63407-0.png"; sourceTree = "<group>"; };
 		371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCGestureRecognizerExtension.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				37156C271EFB580000A18D68 /* CCImageViewExtension.swift */,
 				37156C2C1EFB6A1D00A18D68 /* CCLabelExtension.swift */,
 				37156C2E1EFB6F9500A18D68 /* CCNavigationItemExtension.swift */,
+				37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
 				37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */,
 				3737D9671EF76C68002A6F9D /* CCCustomHeader.swift in Sources */,
+				37156C311EFB75F500A18D68 /* CCScrollViewExtension.swift in Sources */,
 				3737D96C1EF7B103002A6F9D /* CCColorExtension.swift in Sources */,
 				37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */,
 				37B5C1761EF3DF740097A038 /* CCCollectionViewExtension.swift in Sources */,

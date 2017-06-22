@@ -27,6 +27,7 @@
 		3737D96C1EF7B103002A6F9D /* CCColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D96B1EF7B103002A6F9D /* CCColorExtension.swift */; };
 		3737D96E1EF7B37D002A6F9D /* CCImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */; };
 		3737D9711EF7DC66002A6F9D /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3737D9701EF7DC66002A6F9D /* 02.png */; };
+		37AA52D21EFBAFB800A42539 /* CCTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */; };
 		37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */; };
 		37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */; };
 		37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1511EF3C0570097A038 /* CCDateExtension.swift */; };
@@ -68,6 +69,7 @@
 		3737D96B1EF7B103002A6F9D /* CCColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCColorExtension.swift; sourceTree = "<group>"; };
 		3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageExtension.swift; sourceTree = "<group>"; };
 		3737D9701EF7DC66002A6F9D /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
+		37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTextFieldExtension.swift; sourceTree = "<group>"; };
 		37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLocalLibrary-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
 		37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				37156C2E1EFB6F9500A18D68 /* CCNavigationItemExtension.swift */,
 				37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */,
 				37156C321EFB77F600A18D68 /* CCTableViewExtension.swift */,
+				37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */,
 				371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */,
 				3737D96A1EF78871002A6F9D /* CCCustomFooter.swift in Sources */,
+				37AA52D21EFBAFB800A42539 /* CCTextFieldExtension.swift in Sources */,
 				37156C2D1EFB6A1D00A18D68 /* CCLabelExtension.swift in Sources */,
 				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
 				37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */,

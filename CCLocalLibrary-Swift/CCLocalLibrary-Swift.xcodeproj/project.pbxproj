@@ -29,6 +29,8 @@
 		3737D9711EF7DC66002A6F9D /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3737D9701EF7DC66002A6F9D /* 02.png */; };
 		37AA52D21EFBAFB800A42539 /* CCTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */; };
 		37AA52D41EFBB37700A42539 /* CCViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D31EFBB37700A42539 /* CCViewExtension.swift */; };
+		37AA52D61EFBBEF700A42539 /* CCViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D51EFBBEF700A42539 /* CCViewControllerExtension.swift */; };
+		37AA52D81EFBC04900A42539 /* CCAlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D71EFBC04900A42539 /* CCAlertViewControllerExtension.swift */; };
 		37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */; };
 		37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */; };
 		37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1511EF3C0570097A038 /* CCDateExtension.swift */; };
@@ -72,6 +74,8 @@
 		3737D9701EF7DC66002A6F9D /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTextFieldExtension.swift; sourceTree = "<group>"; };
 		37AA52D31EFBB37700A42539 /* CCViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCViewExtension.swift; sourceTree = "<group>"; };
+		37AA52D51EFBBEF700A42539 /* CCViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCViewControllerExtension.swift; sourceTree = "<group>"; };
+		37AA52D71EFBC04900A42539 /* CCAlertViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAlertViewControllerExtension.swift; sourceTree = "<group>"; };
 		37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLocalLibrary-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
 		37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */,
 				37156C321EFB77F600A18D68 /* CCTableViewExtension.swift */,
 				37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */,
+				37AA52D51EFBBEF700A42539 /* CCViewControllerExtension.swift */,
+				37AA52D71EFBC04900A42539 /* CCAlertViewControllerExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */,
 				37156C281EFB580000A18D68 /* CCImageViewExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
+				37AA52D61EFBBEF700A42539 /* CCViewControllerExtension.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
 				371C97FC1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift in Sources */,
 				37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */,
@@ -390,6 +397,7 @@
 				37156C311EFB75F500A18D68 /* CCScrollViewExtension.swift in Sources */,
 				3737D96C1EF7B103002A6F9D /* CCColorExtension.swift in Sources */,
 				37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */,
+				37AA52D81EFBC04900A42539 /* CCAlertViewControllerExtension.swift in Sources */,
 				37B5C1761EF3DF740097A038 /* CCCollectionViewExtension.swift in Sources */,
 				37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */,
 				37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */,

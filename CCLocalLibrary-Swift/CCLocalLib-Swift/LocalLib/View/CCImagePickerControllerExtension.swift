@@ -80,6 +80,13 @@ extension UIImagePickerController : UINavigationControllerDelegate , UIImagePick
         return array;
     }
     
+    convenience init?(complete closureComplete : ClousreComplete) {
+        self.init(present: .photosAlbum,
+                  complete: closureComplete,
+                  cancel: nil,
+                  saveError: nil)
+    }
+    
     convenience init?(present type : CCImagePickerPresentType ,
                      complete closureComplete : ClousreComplete ,
                      cancel closureCancel : ClousreCancel ,

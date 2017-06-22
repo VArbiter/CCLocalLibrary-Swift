@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37156C281EFB580000A18D68 /* CCImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C271EFB580000A18D68 /* CCImageViewExtension.swift */; };
 		371C97F21EF8AB6D00A4ACD7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F11EF8AB6D00A4ACD7 /* images.png */; };
 		371C97F41EF8AC4600A4ACD7 /* 0ZG63407-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */; };
 		371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		2775188A15B904D61C3EB22C /* Pods_CCLocalLibrary_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCLocalLibrary_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37156C271EFB580000A18D68 /* CCImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageViewExtension.swift; sourceTree = "<group>"; };
 		371C97F11EF8AB6D00A4ACD7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0ZG63407-0.png"; sourceTree = "<group>"; };
 		371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCGestureRecognizerExtension.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */,
 				371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */,
 				371C97FB1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift */,
+				37156C271EFB580000A18D68 /* CCImageViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */,
 				37B5C1741EF3DEDE0097A038 /* CCCommonFunction.swift in Sources */,
 				37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */,
+				37156C281EFB580000A18D68 /* CCImageViewExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
 				371C97FC1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift in Sources */,

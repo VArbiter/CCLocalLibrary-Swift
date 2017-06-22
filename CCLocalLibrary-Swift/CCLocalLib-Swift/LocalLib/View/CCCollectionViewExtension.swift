@@ -11,16 +11,16 @@ import MJRefresh
 
 extension UICollectionView {
     
-    convenience init?(_ frame : CGRect? ,
+    convenience init?(common frame : CGRect? ,
                      forLayout layout : UICollectionViewLayout? ,
                      forDelegateDataSource delegateDataSource : Any?) {
-        self.init(frame,
+        self.init(common: frame,
                   forLayout: layout,
                   forDelegate: delegateDataSource,
                   forDataSource: delegateDataSource);
     }
     
-    convenience init?(_ frame : CGRect? ,
+    convenience init?(common frame : CGRect? ,
                      forLayout layout : UICollectionViewLayout? ,
                      forDelegate delegate : Any?,
                      forDataSource dataSource : Any?) {

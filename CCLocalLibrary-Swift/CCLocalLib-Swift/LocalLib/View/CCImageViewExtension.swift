@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import Kingfisher
 
 extension UIImageView {
     
@@ -79,6 +81,70 @@ extension Array {
         imageView.animationRepeatCount = Int(INTMAX_MAX);
         imageView.startAnimating();
         return imageView;
+    }
+    
+}
+
+
+/// Loading image for strong network
+extension UIImageView {
+    
+    func ccLoadingImage(url string : String? ) {
+        self.ccLoadingImage(url: string,
+                            holder: nil);
+    }
+    
+    func ccLoadingImage(url string : String? ,
+                        holder imageH : UIImage? ) {
+        self.ccLoadingImage(url: string,
+                            holder: imageH,
+                            complete: nil);
+    }
+    
+    func ccLoadingImage(url string : String? ,
+                        holder imageH : UIImage? ,
+                        complete closureComplete : CompletionHandler? ){
+        self.ccLoadingImage(url: string,
+                            holder: imageH,
+                            progress: nil,
+                            complete: closureComplete);
+    }
+    
+    func ccLoadingImage(url string : String? ,
+                        holder imageH : UIImage? ,
+                        progress closureProgress : DownloadProgressBlock? ,
+                        complete closureComplete : CompletionHandler?) {
+        guard (string != nil)else {
+            return;
+        }
+        if !(string!.isStringValued) {
+            return ;
+        }
+        
+        let closure = { (image : UIImage?) -> Bool in
+            if let imageT = image {
+                self.image = imageT;
+                return true;
+            }
+            return false;
+        }
+        
+        var image : UIImage? = ImageCache.default.retrieveImageInMemoryCache(forKey: string!);
+        if closure(image) {
+            return ;
+        }
+        image = ImageCache.default.retrieveImageInDiskCache(forKey: string!);
+        if closure(image) {
+            return;
+        }
+        
+        if CCNetworkMoniter.sharedInstance.environmentType == .strong {
+            self.kf.setImage(with: ccURL(string!, false),
+                             placeholder: image,
+                             options: nil,
+                             progressBlock:closureProgress,
+                             completionHandler: closureComplete);
+        }
     }
     
 }

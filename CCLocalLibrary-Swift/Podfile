@@ -7,5 +7,6 @@ target 'CCLocalLibrary-Swift' do
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'Alamofire', '~> 4.5.0'
   pod 'AlamofireNetworkActivityIndicator', '~> 2.2.0'
+  pod 'Kingfisher', '~> 3.10.2'
 
 end

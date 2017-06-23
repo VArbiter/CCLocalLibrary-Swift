@@ -96,7 +96,7 @@ func ccImageWithCache(_ string : String ,_ isCache : Bool) -> UIImage? {
     return UIImage.init(contentsOfFile: string);
 }
 
-func CC_Safe_UI_Closure(_ closureNil : Any? ,_ closure : () -> Void) {
+func CC_Safe_UI_Closure(_ closureNil : Any? ,_ closure : CC_Closure_T) {
     guard (closureNil != nil) else {
         return ;
     }
@@ -111,14 +111,14 @@ func CC_Safe_UI_Closure(_ closureNil : Any? ,_ closure : () -> Void) {
     }
 }
 
-func CC_Safe_Closure(_ closureNil : Any? ,_ closure : () -> Void){
+func CC_Safe_Closure(_ closureNil : Any? ,_ closure : CC_Closure_T){
     guard (closureNil != nil) else {
         return ;
     }
     closure() ;
 }
 
-func CC_Main_Queue_Operation(_ closure : () -> Void) {
+func CC_Main_Queue_Operation(_ closure : CC_Closure_T) {
     if Thread.isMainThread {
         closure();
     }

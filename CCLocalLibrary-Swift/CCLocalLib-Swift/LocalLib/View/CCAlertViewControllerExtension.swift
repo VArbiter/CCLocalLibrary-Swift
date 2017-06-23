@@ -27,8 +27,8 @@ extension UIAlertController {
     
     convenience init(title stringTitle : String? ,
                      message stringMessage : String? ,
-                     comfirmAction closureConfirm : (() -> Void)? ,
-                     cancelAction closureCancel : (() -> Void)?) {
+                     comfirmAction closureConfirm : CC_Closure_T? ,
+                     cancelAction closureCancel : CC_Closure_T?) {
         self.init(title: stringTitle,
                   message: stringMessage,
                   confirmButton: ccLocalizeString("_CC_CONFIRM_", "确认"),
@@ -41,8 +41,8 @@ extension UIAlertController {
                      message stringMessage : String? ,
                      confirmButton stringConfirmTitle : String? ,
                      cancelButton stringCancelTitle : String? ,
-                     comfirmAction closureConfirm : (() -> Void)? ,
-                     cancelAction closureCancel : (() -> Void)? ) {
+                     comfirmAction closureConfirm : CC_Closure_T? ,
+                     cancelAction closureCancel : CC_Closure_T? ) {
         self.init(title: stringTitle, message: stringMessage, preferredStyle: .alert);
         
         if let stringConfirmT = stringConfirmTitle {

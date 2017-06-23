@@ -22,6 +22,8 @@ var _CC_IS_SIMULATOR_ : Bool {
     }
 }
 
+typealias CC_Closure_T = (() -> Void)
+
 /// Set "DEBUG" in the "Swift Compiler - Custom Flags" section,
 /// "Other Swift Flags" line. 
 /// Then add the DEBUG symbol with the -D DEBUG entry.
@@ -55,6 +57,8 @@ let _CC_NAVIGATION_ITEM_OFFSET_DEFAULT_ : CGFloat = -16.0;
 let _CC_ANIMATION_COMMON_DURATION_ : TimeInterval = 0.3;
 let _CC_ANIMATION_FAST_DURATION_ : TimeInterval = 0.05;
 let _CC_PROGRESS_TIMER_INTERVAL_ : TimeInterval = 0.05;
+
+let _CC_ALERT_DISSMISS_COMMON_DURATION_ : TimeInterval = 2.0;
 
 let _CC_NAVIGATION_BAR_HEIGHT_ : Double = 44.0;
 let _CC_NAVIGATION_HEIGHT_ : Double = 64.0;

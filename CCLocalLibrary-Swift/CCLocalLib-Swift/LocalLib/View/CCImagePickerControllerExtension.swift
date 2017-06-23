@@ -29,7 +29,7 @@ extension UIImagePickerController : UINavigationControllerDelegate , UIImagePick
     typealias ClosureError = ((NSError?) -> Void)?;
     /// original , edited , cropRect , support types (if images exists) / unsupport types (images are not exist).
     typealias ClousreComplete = ((UIImage? , UIImage? , CGRect? , [CCImagePickerSupportType]) -> CCImageSaveType?)?;
-    typealias ClousreCancel = (() -> Void)?;
+    typealias ClousreCancel = CC_Closure_T?;
     
     private var closureComplete : ClousreComplete {
         set {
@@ -52,7 +52,7 @@ extension UIImagePickerController : UINavigationControllerDelegate , UIImagePick
             objc_setAssociatedObject(self, &_CC_ASOCIATE_KEY_IMAGEPICKER_CANCEL_CLOSURE_, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC);
         }
         get {
-            return objc_getAssociatedObject(self, &_CC_ASOCIATE_KEY_IMAGEPICKER_CANCEL_CLOSURE_) as? (() -> Void);
+            return objc_getAssociatedObject(self, &_CC_ASOCIATE_KEY_IMAGEPICKER_CANCEL_CLOSURE_) as? CC_Closure_T;
         }
     }
     

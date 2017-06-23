@@ -15,7 +15,7 @@ extension UIViewController {
     }
     func ccDismiss(alertController : UIAlertController? ,
                    after delay : Double ,
-                   complete closureComplete : (() -> Void)? ) {
+                   complete closureComplete : CC_Closure_T? ) {
         guard alertController != nil else {
             return ;
         }
@@ -81,14 +81,14 @@ extension UIViewController {
                        complete: nil);
     }
     func ccPresent(controller : UIViewController! ,
-                   complete closureComplete : (() -> Void)? ) {
+                   complete closureComplete : CC_Closure_T? ) {
         self.ccPresent(controller: controller,
                        isAnimated: true,
                        complete: closureComplete);
     }
     func ccPresent(controller : UIViewController! ,
                    isAnimated : Bool ,
-                   complete closureComplete : (() -> Void)? ) {
+                   complete closureComplete : CC_Closure_T? ) {
         controller.providesPresentationContextTransitionStyle = true;
         controller.definesPresentationContext = true;
         controller.modalPresentationStyle = .overCurrentContext;

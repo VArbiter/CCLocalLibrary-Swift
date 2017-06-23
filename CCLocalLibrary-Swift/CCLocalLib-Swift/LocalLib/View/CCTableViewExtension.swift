@@ -72,7 +72,7 @@ extension UITableView {
                       forCellReuseIdentifier: string);
     }
     
-    func ccUpdating(_ closure : () -> Void) {
+    func ccUpdating(_ closure : CC_Closure_T) {
         self.beginUpdates();
         CC_Safe_UI_Closure(closure) { 
             closure();

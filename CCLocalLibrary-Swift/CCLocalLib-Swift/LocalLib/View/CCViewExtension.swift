@@ -159,12 +159,12 @@ extension UIView {
         return bundleR.loadNibNamed("\(self)", owner: nil, options: nil)?.first;
     }
     
-    func ccAddTapGesture(action closure : (() -> Void)? ) {
+    func ccAddTapGesture(action closure : CC_Closure_T? ) {
         self.ccAddTapGesture(taps: 1,
                              action: closure);
     }
     func ccAddTapGesture(taps count : Int ,
-                         action closure : (() -> Void)? ) {
+                         action closure : CC_Closure_T? ) {
         self.isUserInteractionEnabled = true;
         let tapGR : UITapGestureRecognizer = UITapGestureRecognizer.init(taps: count) { (sender) in
             CC_Safe_UI_Closure(closure, { 

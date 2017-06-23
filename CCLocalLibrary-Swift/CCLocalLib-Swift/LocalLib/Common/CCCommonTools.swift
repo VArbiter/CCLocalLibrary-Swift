@@ -50,7 +50,7 @@ open class CCCommonTools : NSObject {
     
     convenience init(timer interval : Int ,
                      action closureAction : (() -> Bool)? ,
-                     cancel closureCancel : (() -> Void)? ) {
+                     cancel closureCancel : CC_Closure_T? ) {
         self.init(timer: interval,
                   onMain: true,
                   action: closureAction,
@@ -60,7 +60,7 @@ open class CCCommonTools : NSObject {
     convenience init(timer interval : Int ,
                      onMain isMain : Bool , // is on main thread , when an event has recall
                      action closureAction : (() -> Bool)? ,
-                     cancel closureCancel : (() -> Void)? ) {
+                     cancel closureCancel : CC_Closure_T? ) {
         self.init();
         
         if let timerT = self.timer {

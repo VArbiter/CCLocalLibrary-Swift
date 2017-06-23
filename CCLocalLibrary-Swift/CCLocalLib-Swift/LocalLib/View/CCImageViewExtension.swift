@@ -30,12 +30,12 @@ extension UIImageView {
         self.ccGussianImage(complete: nil);
     }
     
-    func ccGussianImage(complete closure : (() -> Void)? ) {
+    func ccGussianImage(complete closure : CC_Closure_T? ) {
         self.ccGussianImage(blur: _CC_GAUSSIAN_BLUR_VALUE_,
                             complete: closure);
     }
     
-    func ccGussianImage(blur value : Double , complete closure : (() -> Void)? ) {
+    func ccGussianImage(blur value : Double , complete closure : CC_Closure_T? ) {
         guard self.image != nil else {
             return ;
         }

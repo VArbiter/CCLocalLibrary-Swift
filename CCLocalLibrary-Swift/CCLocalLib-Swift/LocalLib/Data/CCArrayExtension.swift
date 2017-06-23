@@ -36,12 +36,12 @@ extension Array {
         }
     }
     
-    var closureComplete : (() -> Void)? {
+    var closureComplete : CC_Closure_T? {
         set (value) {
             objc_setAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_COMPLETE_, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         }
         get {
-            return objc_getAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_COMPLETE_) as? (() -> Void);
+            return objc_getAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_COMPLETE_) as? CC_Closure_T;
         }
     }
      */
@@ -59,7 +59,7 @@ extension Array {
     mutating func ccAppend<T : Equatable>(_ item : T?,
                            itemType clazz : String? ,
                            changeObserver closureChange : ((Any , Int) -> Void)? ,
-                           complete closureComplete : (() -> Void)? ) {
+                           complete closureComplete : CC_Closure_T? ) {
         var isCanAdd : Bool = false;
         
         guard (item != nil) else {
@@ -94,7 +94,7 @@ extension Array {
     mutating func ccAppend<T : Equatable>(_ items : [T]? ,
                            objectType clazz : String?,
                            changeObserver closureChange : ((Any , Int) -> Void)? ,
-                           complete closureComplete : (() -> Void)? ) {
+                           complete closureComplete : CC_Closure_T? ) {
         guard (items != nil) else {
             return ;
         }
@@ -148,7 +148,7 @@ extension Array {
     mutating func ccRemove<T : Equatable>(_ item : T? ,
                            itemType clazz : String? ,
                            changeObserver closureChange : ((Any , Int , Int) -> Void)? , // item , index before delete (but already change with next delete action) , totalCount
-                           complete closureComplete : (() -> Void)? ) {
+                           complete closureComplete : CC_Closure_T? ) {
         guard (item != nil) else {
             return;
         }
@@ -189,7 +189,7 @@ extension Array {
     mutating func ccRemoveAll(itemType clazz : String? ,
                               comfirm closure : ((Any , Bool) -> Bool)? ,
                               changeObserver closureChange : ((Any , Int , Int) -> Void)? ,
-                              complete closureComplete : (() -> Void)? ) {
+                              complete closureComplete : CC_Closure_T? ) {
         guard (self.count > 0) else {
             return ;
         }

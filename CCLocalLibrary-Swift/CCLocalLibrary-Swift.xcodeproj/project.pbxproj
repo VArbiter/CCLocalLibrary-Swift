@@ -14,6 +14,7 @@
 		37156C331EFB77F600A18D68 /* CCTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C321EFB77F600A18D68 /* CCTableViewExtension.swift */; };
 		371993351EFCBEE500C71C02 /* CCWebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371993341EFCBEE500C71C02 /* CCWebViewExtension.swift */; };
 		371993381EFCC91800C71C02 /* CCNetworkMoniter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371993371EFCC91800C71C02 /* CCNetworkMoniter.swift */; };
+		3719933A1EFD0AD800C71C02 /* CCProgressHudExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371993391EFD0AD800C71C02 /* CCProgressHudExtension.swift */; };
 		371C97F21EF8AB6D00A4ACD7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F11EF8AB6D00A4ACD7 /* images.png */; };
 		371C97F41EF8AC4600A4ACD7 /* 0ZG63407-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */; };
 		371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */; };
@@ -59,6 +60,7 @@
 		37156C321EFB77F600A18D68 /* CCTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTableViewExtension.swift; sourceTree = "<group>"; };
 		371993341EFCBEE500C71C02 /* CCWebViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCWebViewExtension.swift; sourceTree = "<group>"; };
 		371993371EFCC91800C71C02 /* CCNetworkMoniter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNetworkMoniter.swift; sourceTree = "<group>"; };
+		371993391EFD0AD800C71C02 /* CCProgressHudExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCProgressHudExtension.swift; sourceTree = "<group>"; };
 		371C97F11EF8AB6D00A4ACD7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0ZG63407-0.png"; sourceTree = "<group>"; };
 		371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCGestureRecognizerExtension.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				37AA52D51EFBBEF700A42539 /* CCViewControllerExtension.swift */,
 				37AA52D71EFBC04900A42539 /* CCAlertViewControllerExtension.swift */,
 				371993341EFCBEE500C71C02 /* CCWebViewExtension.swift */,
+				371993391EFD0AD800C71C02 /* CCProgressHudExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				37156C2D1EFB6A1D00A18D68 /* CCLabelExtension.swift in Sources */,
 				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
 				37AA52D41EFBB37700A42539 /* CCViewExtension.swift in Sources */,
+				3719933A1EFD0AD800C71C02 /* CCProgressHudExtension.swift in Sources */,
 				37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */,
 				3737D9671EF76C68002A6F9D /* CCCustomHeader.swift in Sources */,
 				37156C311EFB75F500A18D68 /* CCScrollViewExtension.swift in Sources */,

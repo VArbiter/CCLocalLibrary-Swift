@@ -12,6 +12,15 @@ enum CCViewEndLoadType : Int {
     case nonee = 0, end , noMoreData , endRefresh , manualEnd
 }
 
+var _CC_IS_SIMULATOR_ : Bool {
+    get {
+        if TARGET_OS_SIMULATOR > 0{
+            return true;
+        }
+        return false;
+    }
+}
+
 let _CC_DECIMAL_POINT_POSITION_ : Int16 = 2;
 
 let _CC_DEFAULT_FONT_SIZE_ : CGFloat = 11.0;
@@ -27,4 +36,6 @@ let _CC_GAUSSIAN_BLUR_ITERATION_COUNT_ : Int = 2;
 let _CC_GAUSSIAN_BLUR_TINT_ALPHA_ : CGFloat = 0.25;
 
 let _CC_NAVIGATION_ITEM_OFFSET_DEFAULT_ : CGFloat = -16.0;
+
+let _CC_ANIMATION_COMMON_DURATION_ : TimeInterval = 0.3;
 

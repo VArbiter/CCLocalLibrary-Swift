@@ -15,19 +15,37 @@ func CCLog <T> (_ p : T ,
             stringFileName : String = #file ,
             stringFunction : String = #function ,
             integerLine : Int = #line) {
+#if DEBUG
     let formatter : DateFormatter = DateFormatter.init();
     formatter.dateFormat = "YYYY-MM-dd hh:mm:ss.SSS zzz";
     print("[\(formatter.string(from: .init(timeIntervalSinceNow: 0)))]:");
     print("_CC_LOG_ \n\(stringFileName) \n\(stringFunction) \n\(integerLine) \n\(p) \n");
+#endif
 }
 
 func CCLogFunctionInfo(stringFileName : String = #file ,
                          stringFunction : String = #function ,
                          integerLine : Int = #line) {
+#if DEBUG
     let formatter : DateFormatter = DateFormatter.init();
     formatter.dateFormat = "YYYY-MM-dd hh:mm:ss.SSS zzz";
     print("[\(formatter.string(from: .init(timeIntervalSinceNow: 0)))]:");
     print("_CC_LOG_ \n\(stringFileName) \n\(integerLine) \n\(stringFunction) \n");
+#endif
+}
+
+/// iPhone 7 Basic 1334.f * 750.f
+func CC_DYNAMIC_WIDTH(_ value : CGFloat) -> CGFloat {
+    return value / 750.0 * UIScreen.main.bounds.size.width;
+}
+func CC_DYNAMIC_HEIGHT(_ value : CGFloat) -> CGFloat {
+    return value / 1334.0 * UIScreen.main.bounds.size.height;
+}
+func CC_DYNAMIC_WIDTH_SCALE(_ value : CGFloat) -> CGFloat {
+    return value / 750.0;
+}
+func CC_DYNAMIC_HEIGHT_SCALE(_ value : CGFloat) -> CGFloat {
+    return value / 1334.0;
 }
 
 func ccScreenWidth() -> Double {

@@ -51,7 +51,9 @@ extension WKWebView {
     func ccLoad(request string : String?) -> WKNavigation? {
         if let stringT = string {
             if stringT.isStringValued {
-                return self.load(URLRequest.init(url: URL.init(string: stringT)));
+                if let urlT = URL.init(string: stringT) {
+                    return self.load(URLRequest.init(url: urlT));
+                }
             }
         }
         return nil;

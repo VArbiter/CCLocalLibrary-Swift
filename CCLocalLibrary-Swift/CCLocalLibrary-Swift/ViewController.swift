@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    /// for testing ...
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +63,17 @@ class ViewController: UIViewController {
                                                             y: imageView.frame.origin.y + imageView.frame.size.height),
                                        size: imageA.ccZoom(equal: 0.4));
         self.view.addSubview(imageViewA);
+        
+        CCNetworkMoniter.sharedInstance.ccEnableMoniter();
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ccNotification(_:)),
+                                               name: NSNotification.Name(rawValue: _CC_NETWORK_STATUS_CHANGE_NOTIFICATION_),
+                                               object: nil);
+    }
+    
+    @objc private func ccNotification(_ sender : Notification) {
+        CCLog(sender.userInfo![_CC_NETWORK_STATUS_KEY_OLD_]);
+        CCLog(sender.userInfo![_CC_NETWORK_STATUS_KEY_NEW_]);
     }
 
     override func didReceiveMemoryWarning() {

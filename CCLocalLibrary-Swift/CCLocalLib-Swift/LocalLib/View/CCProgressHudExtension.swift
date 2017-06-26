@@ -275,6 +275,7 @@ extension UIView {
         }
     }
     
+    /// can't auto dismiss by a timer .
     func ccShowIndicator() -> MBProgressHUD{
         return self.ccShowIndicator(type: nil);
     }
@@ -285,7 +286,7 @@ extension UIView {
     
     func ccShowIndicator(type : MBProgressHUD.CCHudType? ,
                          message stringM : String?) -> MBProgressHUD {
-        return MBProgressHUD.ccShowIndicator(after: _CC_ALERT_DISSMISS_COMMON_DURATION_,
+        return MBProgressHUD.ccShowIndicator(after: -1,
                                              with: self,
                                              title: nil,
                                              message: stringM,

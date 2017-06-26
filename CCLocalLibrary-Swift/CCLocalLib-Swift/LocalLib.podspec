@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LocalLib"
-  s.version      = "0.6.0"
+  s.version      = "0.6.3"
   s.summary      = "LocalLib written in swift 3.1"
 
   s.description  = <<-DESC

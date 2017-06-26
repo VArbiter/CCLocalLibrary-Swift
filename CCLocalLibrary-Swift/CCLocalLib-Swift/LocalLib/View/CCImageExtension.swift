@@ -72,6 +72,8 @@ extension UIImage {
             return .jpeg;
         case 0x89:
             return .png;
+        case 0x47:
+            return .gif;
         case 0x49:
             fallthrough;
         case 0x4D:

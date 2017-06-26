@@ -22,12 +22,11 @@ extension UIViewController {
         
         if delay > 0 {
             DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
-                alertController?.dismiss(animated: true, completion: {
-                    if let closureCompleteT = closureComplete {
-                        closureCompleteT();
-                    }
-                })
+                alertController?.dismiss(animated: true, completion: closureComplete);
             });
+        } else {
+            alertController?.dismiss(animated: true,
+                                     completion: closureComplete);
         }
     }
     
@@ -57,12 +56,6 @@ extension UIViewController {
             return controller as? UIViewController;
         }
         return window?.rootViewController;
-    }
-    private class func ccGetCurrentModalController() -> UIViewController? {
-        if (UIApplication.shared.keyWindow?.rootViewController?.isKind(of: UINavigationController.self))! {
-            return (UIApplication.shared.keyWindow?.rootViewController as! UINavigationController).visibleViewController;
-        }
-        return UIApplication.shared.keyWindow?.rootViewController;
     }
     
     func ccPush(controller : UIViewController!) {

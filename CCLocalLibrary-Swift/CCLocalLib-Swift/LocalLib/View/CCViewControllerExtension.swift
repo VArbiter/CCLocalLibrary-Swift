@@ -57,6 +57,12 @@ extension UIViewController {
         }
         return window?.rootViewController;
     }
+    private class func ccGetCurrentModalController() -> UIViewController? {
+        if (UIApplication.shared.keyWindow?.rootViewController?.isKind(of: UINavigationController.self))! {
+            return (UIApplication.shared.keyWindow?.rootViewController as! UINavigationController).visibleViewController;
+        }
+        return UIApplication.shared.keyWindow?.rootViewController;
+    }
     
     func ccPush(controller : UIViewController!) {
         self.ccPush(controller: controller, isAnimated: true);

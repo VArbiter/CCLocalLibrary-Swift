@@ -20,6 +20,9 @@ extension MBProgressHUD {
     func enable() {
         self.isUserInteractionEnabled = true;
     }
+    func disable() {
+        self.isUserInteractionEnabled = false;
+    }
     
     class func ccHideAll() {
         self.ccHideAll(with: nil);
@@ -49,7 +52,7 @@ extension MBProgressHUD {
     }
     
     class func ccHideSingleHud() {
-        
+        self.ccHideSingleHud(nil);
     }
     class func ccHideSingleHud(_ view : UIView?) {
         let closure = { (viewR : UIView?) -> Void in
@@ -164,11 +167,20 @@ extension MBProgressHUD {
     }
     private class func ccDefaultSettings(type : CCHudType? ,
                                          view : UIView?) -> MBProgressHUD {
+        return self.ccDefaultSettings(type: type,
+                                      view: view,
+                                      isIndicatorEnable: false);
+    }
+    private class func ccDefaultSettings(type : CCHudType? ,
+                                         view : UIView? ,
+                                         isIndicatorEnable : Bool) -> MBProgressHUD{
         let closure = { (viewR : UIView?) -> MBProgressHUD in
             if let viewT = viewR {
                 let hud : MBProgressHUD = MBProgressHUD.showAdded(to: viewT,
                                                                   animated: true);
-                hud.mode = .text;
+                if !isIndicatorEnable {
+                    hud.mode = .text;
+                }
                 hud.isUserInteractionEnabled = false;
                 if let typeT = type {
                     switch typeT {
@@ -230,28 +242,13 @@ extension MBProgressHUD {
                                type : CCHudType? ) -> MBProgressHUD {
         let closure = { (viewR : UIView?) -> MBProgressHUD in
             if let viewT = viewR {
-                let hud : MBProgressHUD = MBProgressHUD.showAdded(to: viewT,
-                                                                  animated: true);
-                hud.isUserInteractionEnabled = false;
+                let hud : MBProgressHUD = self.ccDefaultSettings(type: type,
+                                                                 view: viewT,
+                                                                 isIndicatorEnable: true);
                 if float > 0 {
                     hud.hide(animated: true, afterDelay: float);
                 }
                 hud.detailsLabel.text = stringM;
-                
-                if let typeT = type {
-                    switch typeT {
-                    case .light:
-                        hud.contentColor = UIColor.black;
-                    case .darkDeep:
-                        hud.bezelView.style = .solidColor ;
-                        fallthrough;
-                    case .dark:
-                        hud.contentColor = UIColor.white;
-                        hud.bezelView.backgroundColor = UIColor.black;
-                    default:
-                        break;
-                    }
-                }
                 
                 return hud;
             }
@@ -271,6 +268,12 @@ extension MBProgressHUD {
 
 /// for MBProgressHud
 extension UIView {
+    
+    var isHasHud : Bool {
+        get {
+            return MBProgressHUD.ccIsCurrentHasHud(self) > 0;
+        }
+    }
     
     func ccShowIndicator() -> MBProgressHUD{
         return self.ccShowIndicator(type: nil);

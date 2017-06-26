@@ -143,6 +143,7 @@ extension UITableView {
     
 }
 
+/*
 extension Array {
     
     func ccReload(tableView : UITableView , section : Int) {
@@ -160,6 +161,7 @@ extension Array {
     }
     
 }
+ */
 
 class CCTableViewDelegate : NSObject , UITableViewDelegate {
     

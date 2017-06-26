@@ -122,19 +122,24 @@ extension UICollectionView {
     /// Functions below is used for hide animate ,
     /// like flash white in collectionView (specific).
     
-    fileprivate func ccReloadData() {
-        self.ccReloadSections(IndexSet.init(integer: 0));
+    func ccReloadData() {
+        self.ccReloadSections([0]);
     }
     
-    fileprivate func ccReloadSections(_ indexSet : IndexSet?) {
-        guard indexSet != nil else {
-            return;
+    func ccReloadSections(_ array : [Int]?) {
+        var indexSet : IndexSet = IndexSet.init();
+        if let arrayT = array {
+            for item in arrayT {
+                indexSet.insert(item);
+            }
+        } else {
+            indexSet.insert(0);
         }
         
         CC_Main_Queue_Operation {
             UIView.setAnimationsEnabled(false);
             self.performBatchUpdates({ [unowned self] in
-                self.reloadSections(indexSet!);
+                self.reloadSections(indexSet);
             }, completion: { (isComplete) in
                 UIView.setAnimationsEnabled(true);
             })
@@ -143,6 +148,7 @@ extension UICollectionView {
     
 }
 
+/*
 /// Use these functions when the array instance is a datasource for collectionView .
 extension Array {
     
@@ -157,13 +163,14 @@ extension Array {
     }
     
     func ccReloadSections(with collectionView : UICollectionView? ,
-                      sections indexSet : IndexSet?) {
+                      sections indexSet : [Int]?) {
         if let collectionViewT = collectionView {
             collectionViewT.ccReloadSections(indexSet);
         }
     }
     
 }
+ */
 
 /// UICollectionViewFlowLayout
 extension UICollectionViewFlowLayout {

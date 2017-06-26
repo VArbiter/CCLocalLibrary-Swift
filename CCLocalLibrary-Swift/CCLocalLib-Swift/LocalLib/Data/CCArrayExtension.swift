@@ -8,119 +8,7 @@
 
 import Foundation
 
-//private var _CC_ASSOCIATE_KEY_STRING_CLASS_ : Void?;
-//private var _CC_ASSOCIATE_KEY_CLOSURE_CHANGE_ : Void?;
-//private var _CC_ASSOCIATE_KEY_CLOSURE_COMPLETE_ : Void?;
-
 extension Array {
-    
-    /// properties "stringClass , closureChange , closureComplete" is not recomended to set, therefore I comment out it .
-    /// Cause with some differences of OC , one is that the swift Array is a struct and extension Array just add a property to struct ,
-    /// and a struct , by all means , not a class , use a same value . kinda flyweight , huh?
-    /*
-    var stringClass : String? {
-        set (value) {
-            objc_setAssociatedObject(self, &_CC_ASSOCIATE_KEY_STRING_CLASS_, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        }
-        get {
-            return objc_getAssociatedObject(self, &_CC_ASSOCIATE_KEY_STRING_CLASS_) as? String;
-        }
-    };
-    
-    var closureChange : ((Any , Int) -> Void)? {
-        set (value) {
-            objc_setAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_CHANGE_, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        }
-        get {
-            return objc_getAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_CHANGE_) as? ((Any, Int) -> Void);
-        }
-    }
-    
-    var closureComplete : CC_Closure_T? {
-        set (value) {
-            objc_setAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_COMPLETE_, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        }
-        get {
-            return objc_getAssociatedObject(self, &_CC_ASSOCIATE_KEY_CLOSURE_COMPLETE_) as? CC_Closure_T;
-        }
-    }
-     */
-    
-    /// Swift is a type-safe language .
-    /// Therefore , these function has no effect . but , the monitor of change is an exception
-    /// On the other thought , why I need these monitor ?
-    /*
-    mutating func ccAppend<T : Equatable>(_ item : T?) { // make self (Array) mutable .
-        self.ccAppend(item, itemType: nil);
-    }
-    mutating func ccAppend<T : Equatable>(_ item : T?, itemType clazz : String?) {
-        self.ccAppend(item, itemType: clazz, changeObserver: nil, complete: nil);
-    }
-    mutating func ccAppend<T : Equatable>(_ item : T?,
-                           itemType clazz : String? ,
-                           changeObserver closureChange : ((Any , Int) -> Void)? ,
-                           complete closureComplete : CC_Closure_T? ) {
-        var isCanAdd : Bool = false;
-        
-        guard (item != nil) else {
-            return ;
-        }
-        
-        let mirror : Mirror = Mirror.init(reflecting: item!); // reflect : get the item type
-        if let clazzT = clazz {
-            isCanAdd = "\(mirror.subjectType)" == clazzT;
-        } else {
-            isCanAdd = true;
-        }
-        if isCanAdd {
-            if let itemT = (item as? Element) {
-                self.append(itemT);
-                if let closureChangeT = closureChange {
-                    closureChangeT(itemT , self.count);
-                }
-                if let closureCompleteT = closureComplete {
-                    closureCompleteT();
-                }
-            }
-        }
-    }
-    
-    mutating func ccAppend<T : Equatable>(_ items : [T]?) {
-        self.ccAppend(items, objectType: nil);
-    }
-    mutating func ccAppend<T : Equatable>(_ items : [T]? , objectType clazz : String?) {
-//      self.ccAppend(items, itemType: clazz, changeObserver: nil, complete: nil);
-    }
-    mutating func ccAppend<T : Equatable>(_ items : [T]? ,
-                           objectType clazz : String?,
-                           changeObserver closureChange : ((Any , Int) -> Void)? ,
-                           complete closureComplete : CC_Closure_T? ) {
-        guard (items != nil) else {
-            return ;
-        }
-        
-        for object in items! {
-            var isCanAdd : Bool = false;
-            let mirror : Mirror = Mirror.init(reflecting: object);
-            if let clazzT = clazz {
-                isCanAdd = "\(mirror.subjectType)" == clazzT;
-            } else {
-                isCanAdd = true;
-            }
-            if isCanAdd {
-                if let objectT = (object as? Element) {
-//                    self.append(object);
-                    if let closureChangeT = closureChange {
-                        closureChangeT(object , self.count);
-                    }
-                }
-            }
-        }
-        if let closureCompleteT = closureComplete {
-            closureCompleteT();
-        }
-    }
-     */
     
     func ccValueAt(_ index : Int) -> Any? {
         return self.ccValueAt(index, closure: nil);
@@ -257,6 +145,45 @@ extension Array {
             arrayCorrect.append(indexCorrect);
         }
         return arrayCorrect;
+    }
+    
+}
+
+//MAEK: - Reload
+
+import UIKit
+
+/// Use these functions when the array instance is a datasource for collectionView || tableView.
+extension Array {
+    
+    func ccReload(_ view : AnyObject?) {
+        self.ccReload(view, sections: [0]);
+    }
+    
+    func ccReload(_ view : AnyObject? ,
+                  sections : [Int]?) {
+        if let viewT = view as? UITableView {
+            if self.isArrayValued {
+                if let arrayT = sections {
+                    viewT.ccReload(sections: arrayT);
+                } else {
+                    viewT.ccReload(sections: [0]);
+                }
+            } else {
+                viewT.reloadData();
+            }
+        }
+        else if let viewR = view as? UICollectionView {
+            if self.isArrayValued {
+                if let arrayT = sections {
+                    viewR.ccReloadSections(arrayT);
+                } else {
+                    viewR.ccReloadSections([0]);
+                }
+            } else {
+                viewR.reloadData();
+            }
+        }
     }
     
 }

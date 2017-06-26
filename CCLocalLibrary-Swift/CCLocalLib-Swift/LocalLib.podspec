@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LocalLib"
-  s.version      = "0.5.1"
+  s.version      = "0.6.0"
   s.summary      = "LocalLib written in swift 3.1"
 
   s.description  = <<-DESC
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.source_files  = "LocalLib", "LocalLib/**/*"
   # s.exclude_files = "Classes/Exclude"
 
-  s.frameworks = "CoreGraphics", "Foundation" ,"ImageIO" , "MobileCoreServices", "QuartzCore", "Security" , "SystemConfiguration" , "CoreTelephony"
+  s.frameworks = "CoreGraphics", "Foundation" ,"ImageIO" , "MobileCoreServices", "QuartzCore", "Security" , "SystemConfiguration" , "CoreTelephony" , "Photos" , "AssetsLibrary"
 
   s.requires_arc = true
 

@@ -1,8 +1,8 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "LocalLib"
-  s.version      = "0.6.4"
+  s.name         = "CCLocalLib"
+  s.version      = "0.6.5"
   s.summary      = "LocalLib written in swift 3.1"
 
   s.description  = <<-DESC
@@ -17,11 +17,10 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "LocalLib", :tag => "#{s.version}" }
+  s.source       = { :git => "CCLocalLib", :tag => "#{s.version}" }
 
 
-  s.source_files  = "LocalLib", "LocalLib/**/*"
-  # s.exclude_files = "Classes/Exclude"
+  s.source_files  = "CCLocalLib", "CCLocalLib/**/*"
 
   s.frameworks = "CoreGraphics", "Foundation" ,"ImageIO" , "MobileCoreServices", "QuartzCore", "Security" , "SystemConfiguration" , "CoreTelephony" , "Photos" , "AssetsLibrary"
 

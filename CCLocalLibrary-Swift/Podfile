@@ -9,6 +9,6 @@ target 'CCLocalLibrary-Swift' do
 #  pod 'AlamofireNetworkActivityIndicator', '~> 2.2.0'
 #  pod 'Kingfisher', '~> 3.10.2'
 
-  pod 'LocalLib' , :path => 'CCLocalLib-Swift'
+  pod 'CCLocalLib' , :path => 'CCLocalLib-Swift'
 
 end

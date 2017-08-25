@@ -69,6 +69,8 @@ class ViewController: UIViewController {
                                                selector: #selector(ccNotification(_:)),
                                                name: NSNotification.Name(rawValue: _CC_NETWORK_STATUS_CHANGE_NOTIFICATION_),
                                                object: nil);
+        
+        "s".s("s").s("s");
     }
     
     @objc private func ccNotification(_ sender : Notification) {

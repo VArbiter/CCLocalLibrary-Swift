@@ -205,3 +205,21 @@ extension String {
     }
     
 }
+
+extension String {
+    
+    func s(_ string : String?) -> String {
+        guard let s = string else {
+            return self;
+        }
+        return self.appending(s);
+    }
+    
+    func p(_ string : String?) -> String {
+        guard let s = string else {
+            return self;
+        }
+        return self.appending(s);
+    }
+    
+}

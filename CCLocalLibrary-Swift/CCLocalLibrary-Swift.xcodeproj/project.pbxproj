@@ -7,65 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37156C281EFB580000A18D68 /* CCImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C271EFB580000A18D68 /* CCImageViewExtension.swift */; };
-		37156C2D1EFB6A1D00A18D68 /* CCLabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C2C1EFB6A1D00A18D68 /* CCLabelExtension.swift */; };
-		37156C2F1EFB6F9500A18D68 /* CCNavigationItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C2E1EFB6F9500A18D68 /* CCNavigationItemExtension.swift */; };
-		37156C311EFB75F500A18D68 /* CCScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */; };
-		37156C331EFB77F600A18D68 /* CCTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37156C321EFB77F600A18D68 /* CCTableViewExtension.swift */; };
-		371993351EFCBEE500C71C02 /* CCWebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371993341EFCBEE500C71C02 /* CCWebViewExtension.swift */; };
-		371993381EFCC91800C71C02 /* CCNetworkMoniter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371993371EFCC91800C71C02 /* CCNetworkMoniter.swift */; };
-		3719933A1EFD0AD800C71C02 /* CCProgressHudExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371993391EFD0AD800C71C02 /* CCProgressHudExtension.swift */; };
 		371C97F21EF8AB6D00A4ACD7 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F11EF8AB6D00A4ACD7 /* images.png */; };
 		371C97F41EF8AC4600A4ACD7 /* 0ZG63407-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */; };
-		371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */; };
-		371C97FC1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97FB1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift */; };
-		371C97FE1EF918A700A4ACD7 /* CCCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C97FD1EF918A700A4ACD7 /* CCCommonTools.swift */; };
 		37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BAB1EF132BA0037D6BE /* AppDelegate.swift */; };
 		37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37249BAD1EF132BA0037D6BE /* ViewController.swift */; };
 		37249BB11EF132BB0037D6BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BAF1EF132BB0037D6BE /* Main.storyboard */; };
 		37249BB31EF132BB0037D6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37249BB21EF132BB0037D6BE /* Assets.xcassets */; };
 		37249BB61EF132BB0037D6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37249BB41EF132BB0037D6BE /* LaunchScreen.storyboard */; };
-		3737D9671EF76C68002A6F9D /* CCCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D9661EF76C68002A6F9D /* CCCustomHeader.swift */; };
-		3737D96A1EF78871002A6F9D /* CCCustomFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D9691EF78871002A6F9D /* CCCustomFooter.swift */; };
-		3737D96C1EF7B103002A6F9D /* CCColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D96B1EF7B103002A6F9D /* CCColorExtension.swift */; };
-		3737D96E1EF7B37D002A6F9D /* CCImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */; };
 		3737D9711EF7DC66002A6F9D /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3737D9701EF7DC66002A6F9D /* 02.png */; };
-		37AA52D21EFBAFB800A42539 /* CCTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */; };
-		37AA52D41EFBB37700A42539 /* CCViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D31EFBB37700A42539 /* CCViewExtension.swift */; };
-		37AA52D61EFBBEF700A42539 /* CCViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D51EFBBEF700A42539 /* CCViewControllerExtension.swift */; };
-		37AA52D81EFBC04900A42539 /* CCAlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA52D71EFBC04900A42539 /* CCAlertViewControllerExtension.swift */; };
-		37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */; };
-		37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */; };
-		37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1511EF3C0570097A038 /* CCDateExtension.swift */; };
-		37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */; };
-		37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */; };
-		37B5C15F1EF3C0570097A038 /* CCObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */; };
-		37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1551EF3C0570097A038 /* CCStringExtension.swift */; };
-		37B5C1611EF3C0570097A038 /* CCTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */; };
-		37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */; };
-		37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */; };
 		37B5C1671EF3CA970097A038 /* ic_launcher_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B5C1661EF3CA970097A038 /* ic_launcher_144.png */; };
-		37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1711EF3DEDE0097A038 /* CCCommonDefine.swift */; };
-		37B5C1741EF3DEDE0097A038 /* CCCommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1721EF3DEDE0097A038 /* CCCommonFunction.swift */; };
-		37B5C1761EF3DF740097A038 /* CCCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5C1751EF3DF740097A038 /* CCCollectionViewExtension.swift */; };
+		70BA375D1F4FFF2F001C1601 /* CCCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37391F4FFF2F001C1601 /* CCCommonDefine.swift */; };
+		70BA375E1F4FFF2F001C1601 /* CCCommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA373A1F4FFF2F001C1601 /* CCCommonFunction.swift */; };
+		70BA375F1F4FFF2F001C1601 /* CCCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA373B1F4FFF2F001C1601 /* CCCommonTools.swift */; };
+		70BA37601F4FFF2F001C1601 /* CCCustomFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA373D1F4FFF2F001C1601 /* CCCustomFooter.swift */; };
+		70BA37611F4FFF2F001C1601 /* CCCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA373E1F4FFF2F001C1601 /* CCCustomHeader.swift */; };
+		70BA37621F4FFF2F001C1601 /* CCArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37401F4FFF2F001C1601 /* CCArrayExtension.swift */; };
+		70BA37631F4FFF2F001C1601 /* CCAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37411F4FFF2F001C1601 /* CCAttributedStringExtension.swift */; };
+		70BA37641F4FFF2F001C1601 /* CCDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37421F4FFF2F001C1601 /* CCDateExtension.swift */; };
+		70BA37651F4FFF2F001C1601 /* CCDecimalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37431F4FFF2F001C1601 /* CCDecimalExtension.swift */; };
+		70BA37661F4FFF2F001C1601 /* CCDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37441F4FFF2F001C1601 /* CCDictionaryExtension.swift */; };
+		70BA37671F4FFF2F001C1601 /* CCObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37451F4FFF2F001C1601 /* CCObjectExtension.swift */; };
+		70BA37681F4FFF2F001C1601 /* CCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37461F4FFF2F001C1601 /* CCStringExtension.swift */; };
+		70BA37691F4FFF2F001C1601 /* CCTimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37471F4FFF2F001C1601 /* CCTimeIntervalExtension.swift */; };
+		70BA376A1F4FFF2F001C1601 /* CCNetworkMoniter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37491F4FFF2F001C1601 /* CCNetworkMoniter.swift */; };
+		70BA376B1F4FFF2F001C1601 /* CCAlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA374B1F4FFF2F001C1601 /* CCAlertViewControllerExtension.swift */; };
+		70BA376C1F4FFF2F001C1601 /* CCBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA374C1F4FFF2F001C1601 /* CCBarButtonItemExtension.swift */; };
+		70BA376D1F4FFF2F001C1601 /* CCButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA374D1F4FFF2F001C1601 /* CCButtonExtension.swift */; };
+		70BA376E1F4FFF2F001C1601 /* CCCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA374E1F4FFF2F001C1601 /* CCCollectionViewExtension.swift */; };
+		70BA376F1F4FFF2F001C1601 /* CCColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA374F1F4FFF2F001C1601 /* CCColorExtension.swift */; };
+		70BA37701F4FFF2F001C1601 /* CCGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37501F4FFF2F001C1601 /* CCGestureRecognizerExtension.swift */; };
+		70BA37711F4FFF2F001C1601 /* CCImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37511F4FFF2F001C1601 /* CCImageExtension.swift */; };
+		70BA37721F4FFF2F001C1601 /* CCImagePickerControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37521F4FFF2F001C1601 /* CCImagePickerControllerExtension.swift */; };
+		70BA37731F4FFF2F001C1601 /* CCImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37531F4FFF2F001C1601 /* CCImageViewExtension.swift */; };
+		70BA37741F4FFF2F001C1601 /* CCLabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37541F4FFF2F001C1601 /* CCLabelExtension.swift */; };
+		70BA37751F4FFF2F001C1601 /* CCNavigationItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37551F4FFF2F001C1601 /* CCNavigationItemExtension.swift */; };
+		70BA37761F4FFF2F001C1601 /* CCProgressHudExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37561F4FFF2F001C1601 /* CCProgressHudExtension.swift */; };
+		70BA37771F4FFF2F001C1601 /* CCScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37571F4FFF2F001C1601 /* CCScrollViewExtension.swift */; };
+		70BA37781F4FFF2F001C1601 /* CCTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37581F4FFF2F001C1601 /* CCTableViewExtension.swift */; };
+		70BA37791F4FFF2F001C1601 /* CCTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA37591F4FFF2F001C1601 /* CCTextFieldExtension.swift */; };
+		70BA377A1F4FFF2F001C1601 /* CCViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA375A1F4FFF2F001C1601 /* CCViewControllerExtension.swift */; };
+		70BA377B1F4FFF2F001C1601 /* CCViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA375B1F4FFF2F001C1601 /* CCViewExtension.swift */; };
+		70BA377C1F4FFF2F001C1601 /* CCWebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA375C1F4FFF2F001C1601 /* CCWebViewExtension.swift */; };
 		FA89861A428EAB3535DD1CEA /* Pods_CCLocalLibrary_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2775188A15B904D61C3EB22C /* Pods_CCLocalLibrary_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2775188A15B904D61C3EB22C /* Pods_CCLocalLibrary_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCLocalLibrary_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37156C271EFB580000A18D68 /* CCImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageViewExtension.swift; sourceTree = "<group>"; };
-		37156C2C1EFB6A1D00A18D68 /* CCLabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCLabelExtension.swift; sourceTree = "<group>"; };
-		37156C2E1EFB6F9500A18D68 /* CCNavigationItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNavigationItemExtension.swift; sourceTree = "<group>"; };
-		37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCScrollViewExtension.swift; sourceTree = "<group>"; };
-		37156C321EFB77F600A18D68 /* CCTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTableViewExtension.swift; sourceTree = "<group>"; };
-		371993341EFCBEE500C71C02 /* CCWebViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCWebViewExtension.swift; sourceTree = "<group>"; };
-		371993371EFCC91800C71C02 /* CCNetworkMoniter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNetworkMoniter.swift; sourceTree = "<group>"; };
-		371993391EFD0AD800C71C02 /* CCProgressHudExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCProgressHudExtension.swift; sourceTree = "<group>"; };
 		371C97F11EF8AB6D00A4ACD7 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		371C97F31EF8AC4600A4ACD7 /* 0ZG63407-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0ZG63407-0.png"; sourceTree = "<group>"; };
-		371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCGestureRecognizerExtension.swift; sourceTree = "<group>"; };
-		371C97FB1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImagePickerControllerExtension.swift; sourceTree = "<group>"; };
-		371C97FD1EF918A700A4ACD7 /* CCCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonTools.swift; sourceTree = "<group>"; };
 		37249BA81EF132BA0037D6BE /* CCLocalLibrary-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCLocalLibrary-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37249BAB1EF132BA0037D6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37249BAD1EF132BA0037D6BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,31 +62,42 @@
 		37249BB21EF132BB0037D6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37249BB51EF132BB0037D6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37249BB71EF132BB0037D6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3737D9661EF76C68002A6F9D /* CCCustomHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCustomHeader.swift; sourceTree = "<group>"; };
-		3737D9691EF78871002A6F9D /* CCCustomFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCustomFooter.swift; sourceTree = "<group>"; };
-		3737D96B1EF7B103002A6F9D /* CCColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCColorExtension.swift; sourceTree = "<group>"; };
-		3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageExtension.swift; sourceTree = "<group>"; };
 		3737D9701EF7DC66002A6F9D /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
-		37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTextFieldExtension.swift; sourceTree = "<group>"; };
-		37AA52D31EFBB37700A42539 /* CCViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCViewExtension.swift; sourceTree = "<group>"; };
-		37AA52D51EFBBEF700A42539 /* CCViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCViewControllerExtension.swift; sourceTree = "<group>"; };
-		37AA52D71EFBC04900A42539 /* CCAlertViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAlertViewControllerExtension.swift; sourceTree = "<group>"; };
-		37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLocalLibrary-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
-		37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
-		37B5C1511EF3C0570097A038 /* CCDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDateExtension.swift; sourceTree = "<group>"; };
-		37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
-		37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDictionaryExtension.swift; sourceTree = "<group>"; };
-		37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCObjectExtension.swift; sourceTree = "<group>"; };
-		37B5C1551EF3C0570097A038 /* CCStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCStringExtension.swift; sourceTree = "<group>"; };
-		37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTimeIntervalExtension.swift; sourceTree = "<group>"; };
-		37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCBarButtonItemExtension.swift; sourceTree = "<group>"; };
-		37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCButtonExtension.swift; sourceTree = "<group>"; };
 		37B5C1661EF3CA970097A038 /* ic_launcher_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher_144.png; sourceTree = "<group>"; };
-		37B5C1711EF3DEDE0097A038 /* CCCommonDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefine.swift; sourceTree = "<group>"; };
-		37B5C1721EF3DEDE0097A038 /* CCCommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonFunction.swift; sourceTree = "<group>"; };
-		37B5C1751EF3DF740097A038 /* CCCollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCollectionViewExtension.swift; sourceTree = "<group>"; };
 		3A591C02BBC930DEF41F8EEF /* Pods-CCLocalLibrary-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCLocalLibrary-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCLocalLibrary-Swift/Pods-CCLocalLibrary-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		70BA37371F4FFF2F001C1601 /* CCLocalLibrary-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCLocalLibrary-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		70BA37391F4FFF2F001C1601 /* CCCommonDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonDefine.swift; sourceTree = "<group>"; };
+		70BA373A1F4FFF2F001C1601 /* CCCommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonFunction.swift; sourceTree = "<group>"; };
+		70BA373B1F4FFF2F001C1601 /* CCCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCommonTools.swift; sourceTree = "<group>"; };
+		70BA373D1F4FFF2F001C1601 /* CCCustomFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCustomFooter.swift; sourceTree = "<group>"; };
+		70BA373E1F4FFF2F001C1601 /* CCCustomHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCustomHeader.swift; sourceTree = "<group>"; };
+		70BA37401F4FFF2F001C1601 /* CCArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCArrayExtension.swift; sourceTree = "<group>"; };
+		70BA37411F4FFF2F001C1601 /* CCAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAttributedStringExtension.swift; sourceTree = "<group>"; };
+		70BA37421F4FFF2F001C1601 /* CCDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDateExtension.swift; sourceTree = "<group>"; };
+		70BA37431F4FFF2F001C1601 /* CCDecimalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDecimalExtension.swift; sourceTree = "<group>"; };
+		70BA37441F4FFF2F001C1601 /* CCDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCDictionaryExtension.swift; sourceTree = "<group>"; };
+		70BA37451F4FFF2F001C1601 /* CCObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCObjectExtension.swift; sourceTree = "<group>"; };
+		70BA37461F4FFF2F001C1601 /* CCStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCStringExtension.swift; sourceTree = "<group>"; };
+		70BA37471F4FFF2F001C1601 /* CCTimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTimeIntervalExtension.swift; sourceTree = "<group>"; };
+		70BA37491F4FFF2F001C1601 /* CCNetworkMoniter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNetworkMoniter.swift; sourceTree = "<group>"; };
+		70BA374B1F4FFF2F001C1601 /* CCAlertViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCAlertViewControllerExtension.swift; sourceTree = "<group>"; };
+		70BA374C1F4FFF2F001C1601 /* CCBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		70BA374D1F4FFF2F001C1601 /* CCButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCButtonExtension.swift; sourceTree = "<group>"; };
+		70BA374E1F4FFF2F001C1601 /* CCCollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCollectionViewExtension.swift; sourceTree = "<group>"; };
+		70BA374F1F4FFF2F001C1601 /* CCColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCColorExtension.swift; sourceTree = "<group>"; };
+		70BA37501F4FFF2F001C1601 /* CCGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCGestureRecognizerExtension.swift; sourceTree = "<group>"; };
+		70BA37511F4FFF2F001C1601 /* CCImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageExtension.swift; sourceTree = "<group>"; };
+		70BA37521F4FFF2F001C1601 /* CCImagePickerControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImagePickerControllerExtension.swift; sourceTree = "<group>"; };
+		70BA37531F4FFF2F001C1601 /* CCImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCImageViewExtension.swift; sourceTree = "<group>"; };
+		70BA37541F4FFF2F001C1601 /* CCLabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCLabelExtension.swift; sourceTree = "<group>"; };
+		70BA37551F4FFF2F001C1601 /* CCNavigationItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNavigationItemExtension.swift; sourceTree = "<group>"; };
+		70BA37561F4FFF2F001C1601 /* CCProgressHudExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCProgressHudExtension.swift; sourceTree = "<group>"; };
+		70BA37571F4FFF2F001C1601 /* CCScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCScrollViewExtension.swift; sourceTree = "<group>"; };
+		70BA37581F4FFF2F001C1601 /* CCTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTableViewExtension.swift; sourceTree = "<group>"; };
+		70BA37591F4FFF2F001C1601 /* CCTextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCTextFieldExtension.swift; sourceTree = "<group>"; };
+		70BA375A1F4FFF2F001C1601 /* CCViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCViewControllerExtension.swift; sourceTree = "<group>"; };
+		70BA375B1F4FFF2F001C1601 /* CCViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCViewExtension.swift; sourceTree = "<group>"; };
+		70BA375C1F4FFF2F001C1601 /* CCWebViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCWebViewExtension.swift; sourceTree = "<group>"; };
 		A4D1CDC6E517FDB6D6F98526 /* Pods-CCLocalLibrary-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCLocalLibrary-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCLocalLibrary-Swift/Pods-CCLocalLibrary-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,14 +120,6 @@
 				A4D1CDC6E517FDB6D6F98526 /* Pods-CCLocalLibrary-Swift.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		371993361EFCC76800C71C02 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				371993371EFCC91800C71C02 /* CCNetworkMoniter.swift */,
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		37249B9F1EF132BA0037D6BE = {
@@ -169,89 +161,97 @@
 		37249BBD1EF132FE0037D6BE /* CCLocalLib-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				37249BC11EF133C20037D6BE /* LocalLib */,
+				70BA37351F4FFF2F001C1601 /* CCLocalLib */,
 			);
 			path = "CCLocalLib-Swift";
 			sourceTree = "<group>";
 		};
-		37249BC11EF133C20037D6BE /* LocalLib */ = {
+		70BA37351F4FFF2F001C1601 /* CCLocalLib */ = {
 			isa = PBXGroup;
 			children = (
-				37B5C16A1EF3DE9C0097A038 /* Common */,
-				37B5C14C1EF3C0570097A038 /* Data */,
-				37B5C1571EF3C0570097A038 /* View */,
-				3737D9651EF76C3C002A6F9D /* CustomView */,
-				371993361EFCC76800C71C02 /* Tools */,
-				37B5C1471EF3B8B80097A038 /* Bridge */,
+				70BA37361F4FFF2F001C1601 /* Bridge */,
+				70BA37381F4FFF2F001C1601 /* Common */,
+				70BA373C1F4FFF2F001C1601 /* CustomView */,
+				70BA373F1F4FFF2F001C1601 /* Data */,
+				70BA37481F4FFF2F001C1601 /* Tools */,
+				70BA374A1F4FFF2F001C1601 /* View */,
 			);
-			path = LocalLib;
+			path = CCLocalLib;
 			sourceTree = "<group>";
 		};
-		3737D9651EF76C3C002A6F9D /* CustomView */ = {
+		70BA37361F4FFF2F001C1601 /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				3737D9661EF76C68002A6F9D /* CCCustomHeader.swift */,
-				3737D9691EF78871002A6F9D /* CCCustomFooter.swift */,
-			);
-			path = CustomView;
-			sourceTree = "<group>";
-		};
-		37B5C1471EF3B8B80097A038 /* Bridge */ = {
-			isa = PBXGroup;
-			children = (
-				37B5C1481EF3B8CA0097A038 /* CCLocalLibrary-Swift-Bridging-Header.h */,
+				70BA37371F4FFF2F001C1601 /* CCLocalLibrary-Swift-Bridging-Header.h */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
 		};
-		37B5C14C1EF3C0570097A038 /* Data */ = {
+		70BA37381F4FFF2F001C1601 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				37B5C1541EF3C0570097A038 /* CCObjectExtension.swift */,
-				37B5C14D1EF3C0570097A038 /* CCArrayExtension.swift */,
-				37B5C14E1EF3C0570097A038 /* CCAttributedStringExtension.swift */,
-				37B5C1511EF3C0570097A038 /* CCDateExtension.swift */,
-				37B5C1521EF3C0570097A038 /* CCDecimalExtension.swift */,
-				37B5C1531EF3C0570097A038 /* CCDictionaryExtension.swift */,
-				37B5C1551EF3C0570097A038 /* CCStringExtension.swift */,
-				37B5C1561EF3C0570097A038 /* CCTimeIntervalExtension.swift */,
+				70BA37391F4FFF2F001C1601 /* CCCommonDefine.swift */,
+				70BA373A1F4FFF2F001C1601 /* CCCommonFunction.swift */,
+				70BA373B1F4FFF2F001C1601 /* CCCommonTools.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		70BA373C1F4FFF2F001C1601 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				70BA373D1F4FFF2F001C1601 /* CCCustomFooter.swift */,
+				70BA373E1F4FFF2F001C1601 /* CCCustomHeader.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		70BA373F1F4FFF2F001C1601 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				70BA37401F4FFF2F001C1601 /* CCArrayExtension.swift */,
+				70BA37411F4FFF2F001C1601 /* CCAttributedStringExtension.swift */,
+				70BA37421F4FFF2F001C1601 /* CCDateExtension.swift */,
+				70BA37431F4FFF2F001C1601 /* CCDecimalExtension.swift */,
+				70BA37441F4FFF2F001C1601 /* CCDictionaryExtension.swift */,
+				70BA37451F4FFF2F001C1601 /* CCObjectExtension.swift */,
+				70BA37461F4FFF2F001C1601 /* CCStringExtension.swift */,
+				70BA37471F4FFF2F001C1601 /* CCTimeIntervalExtension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		37B5C1571EF3C0570097A038 /* View */ = {
+		70BA37481F4FFF2F001C1601 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				37AA52D31EFBB37700A42539 /* CCViewExtension.swift */,
-				37B5C1621EF3C07E0097A038 /* CCBarButtonItemExtension.swift */,
-				37B5C1641EF3C6650097A038 /* CCButtonExtension.swift */,
-				37B5C1751EF3DF740097A038 /* CCCollectionViewExtension.swift */,
-				37156C321EFB77F600A18D68 /* CCTableViewExtension.swift */,
-				3737D96B1EF7B103002A6F9D /* CCColorExtension.swift */,
-				3737D96D1EF7B37D002A6F9D /* CCImageExtension.swift */,
-				371C97F81EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift */,
-				371C97FB1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift */,
-				37156C271EFB580000A18D68 /* CCImageViewExtension.swift */,
-				37156C2C1EFB6A1D00A18D68 /* CCLabelExtension.swift */,
-				37156C2E1EFB6F9500A18D68 /* CCNavigationItemExtension.swift */,
-				37156C301EFB75F500A18D68 /* CCScrollViewExtension.swift */,
-				37AA52D11EFBAFB800A42539 /* CCTextFieldExtension.swift */,
-				37AA52D51EFBBEF700A42539 /* CCViewControllerExtension.swift */,
-				37AA52D71EFBC04900A42539 /* CCAlertViewControllerExtension.swift */,
-				371993341EFCBEE500C71C02 /* CCWebViewExtension.swift */,
-				371993391EFD0AD800C71C02 /* CCProgressHudExtension.swift */,
+				70BA37491F4FFF2F001C1601 /* CCNetworkMoniter.swift */,
 			);
-			path = View;
+			path = Tools;
 			sourceTree = "<group>";
 		};
-		37B5C16A1EF3DE9C0097A038 /* Common */ = {
+		70BA374A1F4FFF2F001C1601 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				37B5C1711EF3DEDE0097A038 /* CCCommonDefine.swift */,
-				37B5C1721EF3DEDE0097A038 /* CCCommonFunction.swift */,
-				371C97FD1EF918A700A4ACD7 /* CCCommonTools.swift */,
+				70BA374B1F4FFF2F001C1601 /* CCAlertViewControllerExtension.swift */,
+				70BA374C1F4FFF2F001C1601 /* CCBarButtonItemExtension.swift */,
+				70BA374D1F4FFF2F001C1601 /* CCButtonExtension.swift */,
+				70BA374E1F4FFF2F001C1601 /* CCCollectionViewExtension.swift */,
+				70BA374F1F4FFF2F001C1601 /* CCColorExtension.swift */,
+				70BA37501F4FFF2F001C1601 /* CCGestureRecognizerExtension.swift */,
+				70BA37511F4FFF2F001C1601 /* CCImageExtension.swift */,
+				70BA37521F4FFF2F001C1601 /* CCImagePickerControllerExtension.swift */,
+				70BA37531F4FFF2F001C1601 /* CCImageViewExtension.swift */,
+				70BA37541F4FFF2F001C1601 /* CCLabelExtension.swift */,
+				70BA37551F4FFF2F001C1601 /* CCNavigationItemExtension.swift */,
+				70BA37561F4FFF2F001C1601 /* CCProgressHudExtension.swift */,
+				70BA37571F4FFF2F001C1601 /* CCScrollViewExtension.swift */,
+				70BA37581F4FFF2F001C1601 /* CCTableViewExtension.swift */,
+				70BA37591F4FFF2F001C1601 /* CCTextFieldExtension.swift */,
+				70BA375A1F4FFF2F001C1601 /* CCViewControllerExtension.swift */,
+				70BA375B1F4FFF2F001C1601 /* CCViewExtension.swift */,
+				70BA375C1F4FFF2F001C1601 /* CCWebViewExtension.swift */,
 			);
-			path = Common;
+			path = View;
 			sourceTree = "<group>";
 		};
 		968CDC7AC1B9BB6DCD7B3CE9 /* Frameworks */ = {
@@ -360,9 +360,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CCLocalLibrary-Swift/Pods-CCLocalLibrary-Swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/CCLocalLib/CCLocalLib.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCLocalLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,13 +388,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCLocalLibrary-Swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -391,40 +407,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371C97FE1EF918A700A4ACD7 /* CCCommonTools.swift in Sources */,
-				37B5C15F1EF3C0570097A038 /* CCObjectExtension.swift in Sources */,
-				37B5C15C1EF3C0570097A038 /* CCDateExtension.swift in Sources */,
-				37B5C1741EF3DEDE0097A038 /* CCCommonFunction.swift in Sources */,
-				37156C2F1EFB6F9500A18D68 /* CCNavigationItemExtension.swift in Sources */,
-				37B5C1601EF3C0570097A038 /* CCStringExtension.swift in Sources */,
-				37156C281EFB580000A18D68 /* CCImageViewExtension.swift in Sources */,
+				70BA37761F4FFF2F001C1601 /* CCProgressHudExtension.swift in Sources */,
+				70BA376E1F4FFF2F001C1601 /* CCCollectionViewExtension.swift in Sources */,
+				70BA37681F4FFF2F001C1601 /* CCStringExtension.swift in Sources */,
+				70BA376B1F4FFF2F001C1601 /* CCAlertViewControllerExtension.swift in Sources */,
 				37249BAE1EF132BA0037D6BE /* ViewController.swift in Sources */,
-				37AA52D61EFBBEF700A42539 /* CCViewControllerExtension.swift in Sources */,
+				70BA37741F4FFF2F001C1601 /* CCLabelExtension.swift in Sources */,
+				70BA37641F4FFF2F001C1601 /* CCDateExtension.swift in Sources */,
+				70BA37711F4FFF2F001C1601 /* CCImageExtension.swift in Sources */,
+				70BA375F1F4FFF2F001C1601 /* CCCommonTools.swift in Sources */,
+				70BA375D1F4FFF2F001C1601 /* CCCommonDefine.swift in Sources */,
+				70BA37621F4FFF2F001C1601 /* CCArrayExtension.swift in Sources */,
+				70BA37721F4FFF2F001C1601 /* CCImagePickerControllerExtension.swift in Sources */,
+				70BA37651F4FFF2F001C1601 /* CCDecimalExtension.swift in Sources */,
+				70BA37631F4FFF2F001C1601 /* CCAttributedStringExtension.swift in Sources */,
+				70BA37731F4FFF2F001C1601 /* CCImageViewExtension.swift in Sources */,
+				70BA37661F4FFF2F001C1601 /* CCDictionaryExtension.swift in Sources */,
+				70BA376C1F4FFF2F001C1601 /* CCBarButtonItemExtension.swift in Sources */,
+				70BA375E1F4FFF2F001C1601 /* CCCommonFunction.swift in Sources */,
+				70BA37611F4FFF2F001C1601 /* CCCustomHeader.swift in Sources */,
+				70BA377B1F4FFF2F001C1601 /* CCViewExtension.swift in Sources */,
+				70BA37691F4FFF2F001C1601 /* CCTimeIntervalExtension.swift in Sources */,
 				37249BAC1EF132BA0037D6BE /* AppDelegate.swift in Sources */,
-				371993381EFCC91800C71C02 /* CCNetworkMoniter.swift in Sources */,
-				371C97FC1EF90DB600A4ACD7 /* CCImagePickerControllerExtension.swift in Sources */,
-				37B5C1651EF3C6650097A038 /* CCButtonExtension.swift in Sources */,
-				371C97F91EF90A4700A4ACD7 /* CCGestureRecognizerExtension.swift in Sources */,
-				3737D96A1EF78871002A6F9D /* CCCustomFooter.swift in Sources */,
-				37AA52D21EFBAFB800A42539 /* CCTextFieldExtension.swift in Sources */,
-				371993351EFCBEE500C71C02 /* CCWebViewExtension.swift in Sources */,
-				37156C2D1EFB6A1D00A18D68 /* CCLabelExtension.swift in Sources */,
-				37B5C15D1EF3C0570097A038 /* CCDecimalExtension.swift in Sources */,
-				37AA52D41EFBB37700A42539 /* CCViewExtension.swift in Sources */,
-				3719933A1EFD0AD800C71C02 /* CCProgressHudExtension.swift in Sources */,
-				37B5C1731EF3DEDE0097A038 /* CCCommonDefine.swift in Sources */,
-				3737D9671EF76C68002A6F9D /* CCCustomHeader.swift in Sources */,
-				37156C311EFB75F500A18D68 /* CCScrollViewExtension.swift in Sources */,
-				3737D96C1EF7B103002A6F9D /* CCColorExtension.swift in Sources */,
-				37B5C1591EF3C0570097A038 /* CCAttributedStringExtension.swift in Sources */,
-				37AA52D81EFBC04900A42539 /* CCAlertViewControllerExtension.swift in Sources */,
-				37B5C1761EF3DF740097A038 /* CCCollectionViewExtension.swift in Sources */,
-				37B5C15E1EF3C0570097A038 /* CCDictionaryExtension.swift in Sources */,
-				37B5C1631EF3C07E0097A038 /* CCBarButtonItemExtension.swift in Sources */,
-				37B5C1581EF3C0570097A038 /* CCArrayExtension.swift in Sources */,
-				37B5C1611EF3C0570097A038 /* CCTimeIntervalExtension.swift in Sources */,
-				3737D96E1EF7B37D002A6F9D /* CCImageExtension.swift in Sources */,
-				37156C331EFB77F600A18D68 /* CCTableViewExtension.swift in Sources */,
+				70BA37751F4FFF2F001C1601 /* CCNavigationItemExtension.swift in Sources */,
+				70BA377C1F4FFF2F001C1601 /* CCWebViewExtension.swift in Sources */,
+				70BA37671F4FFF2F001C1601 /* CCObjectExtension.swift in Sources */,
+				70BA37791F4FFF2F001C1601 /* CCTextFieldExtension.swift in Sources */,
+				70BA37781F4FFF2F001C1601 /* CCTableViewExtension.swift in Sources */,
+				70BA376D1F4FFF2F001C1601 /* CCButtonExtension.swift in Sources */,
+				70BA37601F4FFF2F001C1601 /* CCCustomFooter.swift in Sources */,
+				70BA376A1F4FFF2F001C1601 /* CCNetworkMoniter.swift in Sources */,
+				70BA377A1F4FFF2F001C1601 /* CCViewControllerExtension.swift in Sources */,
+				70BA376F1F4FFF2F001C1601 /* CCColorExtension.swift in Sources */,
+				70BA37771F4FFF2F001C1601 /* CCScrollViewExtension.swift in Sources */,
+				70BA37701F4FFF2F001C1601 /* CCGestureRecognizerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
